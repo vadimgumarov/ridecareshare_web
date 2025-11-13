@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RideCareShare - The world's first donation-powered airport carpooling app. Share rides, support causes, and build community.">
+    <meta name="keywords" content="rideshare, carpool, airport rides, donation, charity, community, sustainable travel">
+    <meta name="author" content="Vadim">
+    <meta name="contact" content="hello@ridecareshare.com">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="RideCareShare - Share Rides. Share Stories. Support Causes.">
+    <meta property="og:description" content="The world's first donation-powered airport carpooling app that turns travel into community building.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ridecareshare.com">
+
     <title>RideCareShare - Share Rides. Share Stories. Support Causes.</title>
     <style>
         * {
@@ -876,6 +887,10 @@
                 </a>
             </div>
 
+            <div class="contact-info">
+                <p>Contact us: <a href="mailto:hello@ridecareshare.com">hello@ridecareshare.com</a></p>
+            </div>
+
             <p style="margin-top: 20px;">© 2025 RideCareShare, All Rights Reserved.</p>
         </div>
     </footer>
@@ -909,10 +924,19 @@
         document.getElementById('waitlistForm').addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            // TODO: Replace with actual email service endpoint when Google email is set up
-            // Example: FormSpree, EmailJS, or custom backend
+            // TODO: Integrate email service to send submissions to hello@ridecareshare.com
+            // Options:
+            // 1. FormSpree: https://formspree.io (free tier: 50 submissions/month)
+            // 2. EmailJS: https://www.emailjs.com (free tier: 200 emails/month)
+            // 3. Custom backend API endpoint
+            //
+            // Example FormSpree integration:
             // const formData = new FormData(e.target);
-            // await fetch('YOUR_EMAIL_ENDPOINT', { method: 'POST', body: formData });
+            // await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            //     method: 'POST',
+            //     body: formData,
+            //     headers: { 'Accept': 'application/json' }
+            // });
 
             const formData = {
                 name: document.getElementById('name').value,
@@ -921,8 +945,8 @@
                     .map(cb => cb.value)
             };
 
-            console.log('Waitlist submission:', formData);
-            alert('Thank you for joining the waitlist! We\'ll be in touch soon.');
+            console.log('Waitlist submission (would send to hello@ridecareshare.com):', formData);
+            alert('Thank you for joining the waitlist! We\'ll be in touch soon at hello@ridecareshare.com');
             e.target.reset();
         });
 
