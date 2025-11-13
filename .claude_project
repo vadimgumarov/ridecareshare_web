@@ -1,0 +1,446 @@
+# RideCareShare Website - Pre-launch Landing Page
+
+> **Claude Code Integration**: This file provides project-specific context and configuration that supplements the universal development framework defined in CLAUDE.md.
+
+---
+
+## PROJECT CONFIGURATION
+
+### Project Identity
+```yaml
+PROJECT_NAME: "RideCareShare Website"
+PROJECT_TYPE: "web"
+REPOSITORY: "https://github.com/vadimgumarov/ridecareshare_web"
+MAIN_LANGUAGE: "HTML/CSS/JavaScript"
+FRAMEWORK: "Vanilla JS (Static Site)"
+DATABASE: "None (Static Landing Page)"
+DEPLOYMENT: "GitHub Pages"
+VERSION: "1.0.0"
+TEAM_SIZE: "solo"
+TESTING_LEVEL: "basic"
+```
+
+### Technology Stack
+```yaml
+Runtime: "Browser (ES6+ JavaScript)"
+Package Manager: "None (no build process)"
+Build Tool: "None (static HTML/CSS/JS)"
+Test Framework: "Manual testing (browser-based)"
+Linting: "Browser DevTools, HTML/CSS validators"
+Formatting: "Manual formatting"
+CI/CD: "GitHub Actions (for GitHub Pages deployment)"
+```
+
+---
+
+## CRITICAL SAFETY RULES
+
+### Session Start Protocol (MANDATORY)
+1. **ALWAYS read docs/CONTINUATION.md FIRST** - Get current state and next steps
+2. **Read CLAUDE.md** - Understand process rules and workflows
+3. **Read this file (.claude_project)** - Get project context
+4. **State current context** - [branch: ... | issue: #... | status: ...]
+5. **Proceed with workflow** - Make changes, test, commit
+
+### Project-Specific Data Integrity
+**Website Content Rules:**
+```
+- NEVER change brand name from RideCareShare
+- Primary domain: ridecareshare.com (also ridesharetogether.com points here)
+- Founder name: Vadim
+- Keep design pattern: muted earth tones, smooth transitions, accessible
+- Mobile app development is SEPARATE repository - not covered here
+```
+
+### Safety Defaults
+**Deployment and Content Defaults:**
+```
+- Default to GitHub Pages for hosting
+- Default to static HTML/CSS/JS (no build process)
+- Default to responsive design (mobile-first approach)
+- Test on multiple browsers before deployment
+```
+
+### Documentation Enforcement (MANDATORY)
+- **PROGRESS.md** - MUST update when completing any issue
+- **CONTINUATION.md** - MUST update when switching tasks or completing work
+- **Both files** - MUST be updated before committing with "Complete Issue #" or "Closes #"
+- **State tracking** - MUST include [branch: ... | issue: #... | status: ...] in every response
+
+### STRICTLY PROHIBITED APPROACHES - NO EXCEPTIONS
+**Always fix the root problem. These workarounds are NEVER acceptable:**
+- ❌ **Adding unnecessary dependencies** - Keep it static and simple
+- ❌ **Overcomplicating the design** - This is a pre-launch landing page
+- ❌ **Breaking responsive design** - Must work on all devices
+- ❌ **Ignoring accessibility** - All users must be able to navigate
+- ❌ **Hardcoding API keys or secrets** - Never commit sensitive data
+- ❌ **Breaking SEO best practices** - Page must be discoverable
+
+See CLAUDE.md "RED FLAGS" section for full details.
+
+---
+
+## ARCHITECTURE PRINCIPLES
+
+### Core Architectural Rule
+**SIMPLICITY FIRST - Static, Fast, Accessible**
+
+This is a pre-launch landing page for RideCareShare mobile app. The website serves these purposes:
+1. Introduce the concept to potential users
+2. Collect waitlist signups
+3. Provide social media links for ongoing communication
+4. Professional first impression before mobile app launch
+
+**✅ Correct Pattern**: Single `index.html` file with embedded CSS/JS, no dependencies, fast loading, mobile-responsive
+**❌ Prohibited Pattern**: Adding frameworks (React, Vue, etc.), build processes, or unnecessary complexity
+
+### Project Structure (v1.0.0)
+```
+RIDECARESHARE_WEB/
+├── index.html                   # Main landing page (all-in-one file)
+├── CLAUDE.md                    # Universal development framework
+├── .claude_project              # This file - project-specific config
+├── .gitignore                   # Git ignore rules
+├── README.md                    # Project overview and setup
+├── docs/                        # PROJECT DOCUMENTATION
+│   ├── PROGRESS.md              # Active progress tracking
+│   ├── CONTINUATION.md          # Session state (READ FIRST)
+│   ├── ISSUES.md                # Problem/solution log
+│   ├── deployment/              # Deployment guides
+│   │   ├── github-pages.md      # GitHub Pages setup
+│   │   └── domain-setup.md      # Custom domain configuration
+│   └── social-media/            # Social media strategy
+│       └── deployment-plan.md   # Social media account setup
+└── assets/                      # FUTURE: Images, logos, videos
+    └── (to be added as needed)
+```
+
+### Clean Separation (ARCHITECTURAL BOUNDARIES)
+```
+- Website (this repo): Pre-launch landing page, static content, waitlist collection
+- Mobile App (separate repo): Actual RideCareShare application development
+- No duplication: Website is purely informational, app handles all functionality
+```
+
+---
+
+## DEVELOPMENT WORKFLOW
+
+### Primary Development Process
+**Static File Development:**
+```
+1. Edit index.html directly in code editor
+2. Open index.html in browser to preview
+3. Test on multiple browsers (Chrome, Firefox, Safari)
+4. Test responsive design (mobile, tablet, desktop)
+5. Validate HTML/CSS using browser DevTools
+6. Commit changes with descriptive messages
+7. Push to GitHub (auto-deploys to GitHub Pages)
+```
+
+### Command Structure & Scripts
+
+#### Development Commands
+```bash
+# Open in browser for testing
+open index.html
+# or
+python3 -m http.server 8000  # Simple local server
+
+# Validate HTML (if w3c validator installed)
+# Visit: https://validator.w3.org/
+```
+
+#### Quality Assurance Commands
+```bash
+# Check browser console for JavaScript errors
+# Use browser DevTools (F12)
+
+# Test responsive design
+# Use browser DevTools device toolbar (Cmd+Shift+M)
+
+# Accessibility testing
+# Use Lighthouse in Chrome DevTools
+```
+
+---
+
+## CONFIGURATION MANAGEMENT
+
+### Environment Variables
+**No environment variables needed** - This is a static site with no backend.
+
+Email collection will be handled via:
+- TODO: Set up email service (FormSpree, EmailJS, or custom backend)
+- Currently logs to console for testing
+
+### Configuration Files
+```
+- index.html: Complete website (HTML, CSS, JS all in one)
+- .gitignore: Ignore system files (.DS_Store, etc.)
+- README.md: Project documentation and setup instructions
+```
+
+---
+
+## STATIC WEBSITE ARCHITECTURE
+
+### Single-Page Design
+**All content in index.html:**
+```
+- Header: Logo, theme toggle
+- Hero: Main value proposition, CTA buttons
+- Problem: Three crises being addressed
+- Solution: How RideCareShare works
+- Features: Key features grid
+- How It Works: Step-by-step process
+- Impact: Projected social impact
+- Founder: Vadim's story and motivation
+- Testimonials: Early user feedback
+- Waitlist: Signup form
+- Footer: Copyright, social media links
+```
+
+### Theme System
+**Dark/Light mode toggle:**
+```javascript
+- CSS variables for theming (--bg-primary, --text-primary, etc.)
+- localStorage persistence for user preference
+- Smooth transitions between themes
+- Accessible color contrast in both modes
+```
+
+### Social Media Integration
+**Footer social links:**
+```
+- Facebook: https://facebook.com (to be updated with actual account)
+- X (Twitter): https://twitter.com (to be updated with actual account)
+- Instagram: https://instagram.com (to be updated with actual account)
+- YouTube: https://youtube.com (to be updated with actual account)
+```
+
+---
+
+## DATA & STATE MANAGEMENT
+
+### Client-Side State
+**Minimal state management:**
+```javascript
+- Theme preference: Stored in localStorage
+- Waitlist form data: Captured and logged (awaiting email service integration)
+- Smooth scroll: JavaScript for anchor link navigation
+```
+
+### No Database Required
+This is a static landing page. Waitlist submissions will eventually integrate with an email service provider, but no database is needed for the website itself.
+
+---
+
+## DEPLOYMENT & OPERATIONS
+
+### GitHub Pages Deployment
+**Automatic deployment process:**
+```bash
+# 1. Ensure main branch is up to date
+git status
+git add .
+git commit -m "descriptive message"
+git push origin main
+
+# 2. GitHub Pages automatically deploys from main branch
+# 3. Site available at: https://vadimgumarov.github.io/ridecareshare_web/
+
+# 4. Custom domain setup (after DNS configuration):
+# - ridecareshare.com (primary)
+# - ridesharetogether.com (redirect to primary)
+```
+
+### Service URLs & Endpoints
+```
+Development:
+- Local: file:///Users/vadim/Desktop/Projects/RIDECARESHARE_WEB/index.html
+- Local server (optional): http://localhost:8000
+
+Production:
+- GitHub Pages: https://vadimgumarov.github.io/ridecareshare_web/
+- Custom Domain (primary): https://ridecareshare.com
+- Custom Domain (secondary): https://ridesharetogether.com
+```
+
+---
+
+## TESTING STRATEGY (MANUAL)
+
+### Browser Testing
+```
+Required browsers:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest, macOS/iOS)
+- Edge (latest)
+
+Test checklist:
+1. All sections render correctly
+2. Theme toggle works (light/dark mode)
+3. Smooth scroll navigation functions
+4. Waitlist form captures data
+5. Social media links open in new tabs
+6. Responsive design works (mobile, tablet, desktop)
+7. No JavaScript console errors
+8. Fast page load (< 2 seconds)
+```
+
+### Accessibility Testing
+```
+- Use Chrome Lighthouse for accessibility audit
+- Test keyboard navigation (Tab, Enter, Space)
+- Test screen reader compatibility (VoiceOver on macOS)
+- Verify sufficient color contrast in both themes
+- Ensure all images have alt text (when added)
+- Verify ARIA labels on interactive elements
+```
+
+### Performance Testing
+```
+- Lighthouse performance score > 90
+- First Contentful Paint < 1.5s
+- Largest Contentful Paint < 2.5s
+- Cumulative Layout Shift < 0.1
+- No render-blocking resources
+```
+
+---
+
+## SECURITY & COMPLIANCE
+
+### Security Requirements
+```
+- No authentication needed (static site)
+- No sensitive data stored (waitlist emails sent to service)
+- HTTPS enforced via GitHub Pages
+- Content Security Policy via meta tags (if needed)
+- No third-party scripts (privacy-friendly)
+```
+
+### Privacy & Data Collection
+```
+- Waitlist form: Name and email only
+- No tracking scripts or analytics (unless explicitly added)
+- No cookies (except localStorage for theme preference)
+- Privacy-first approach
+```
+
+---
+
+## MONITORING & OBSERVABILITY
+
+### Manual Monitoring
+```
+- Browser DevTools console for errors
+- GitHub Pages deployment status
+- Manual testing after each deployment
+- User feedback via social media
+```
+
+### SEO & Discoverability
+```
+- Meta tags for title, description
+- Open Graph tags for social sharing
+- Semantic HTML structure
+- Mobile-friendly design (Google ranking factor)
+- Fast loading speed (Google ranking factor)
+```
+
+---
+
+## CURRENT PROJECT STATUS
+
+### Pre-Launch Setup Phase ✅
+```
+Current Work:
+- Initial setup complete
+- Branding updated to RideCareShare
+- Social media icons added to footer
+- Email placeholder prepared for waitlist
+- Ready for GitHub Pages deployment
+
+Status: Ready for deployment
+Progress: 90% (pending email service integration)
+Blockers: None
+Next: Deploy to GitHub Pages, configure custom domains
+
+Recent Accomplishments:
+- Git repository initialized and connected to GitHub
+- All branding updated from RideCareTogether to RideCareShare
+- Founder name updated to Vadim
+- Social media icons added with matching design pattern
+- Project configuration files created
+```
+
+### Component Status
+```
+✅ Ready for Production:
+- Landing page design: Complete with responsive layout
+- Theme toggle: Light/dark mode working
+- Waitlist form: UI complete (backend pending)
+- Social media links: Placeholder links ready for accounts
+
+🚧 Pending External Setup:
+- Email service: Integration pending (FormSpree, EmailJS, or custom)
+- Social media accounts: Need to be created and linked
+- Custom domains: DNS configuration needed
+
+📋 Future Enhancements:
+- Add logo/branding images
+- Create 60-second explainer video
+- Add partner charity logos
+- Implement email service for waitlist
+- Add analytics (privacy-friendly option like Plausible)
+```
+
+### Quality Metrics
+```
+Code Quality:
+- Single HTML file: Easy to maintain
+- Valid HTML5: No syntax errors
+- Accessible design: Semantic HTML, ARIA labels
+- No dependencies: Fast, reliable, secure
+
+Performance:
+- File size: ~20KB (very lightweight)
+- Load time: < 1 second (estimated)
+- Mobile-friendly: Responsive design
+- No external requests: Self-contained
+```
+
+---
+
+## CUSTOMIZATION CHECKLIST
+
+### ✅ COMPLETED:
+- [x] Project title and description
+- [x] Project configuration (technology stack)
+- [x] Core architectural principle
+- [x] Project structure
+- [x] Development workflow
+- [x] Deployment strategy
+- [x] Current status
+
+### 🚧 IN PROGRESS:
+- [ ] Email service integration for waitlist
+- [ ] Social media account creation and linking
+- [ ] Custom domain DNS configuration
+
+### 📋 FUTURE TASKS:
+- [ ] Add real testimonials (currently placeholder)
+- [ ] Create and add founder video
+- [ ] Add charity partner logos
+- [ ] Implement analytics (optional)
+- [ ] A/B testing different messaging
+
+---
+
+**Configuration Version**: RideCareShare Website v1.0
+**Project Type**: Static landing page for mobile app pre-launch
+**Solo Development**: Optimized for single developer workflow
+**Claude Code Ready**: Fully compatible with Claude Code workflows and conventions
