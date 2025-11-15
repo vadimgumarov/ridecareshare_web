@@ -245,41 +245,27 @@
             text-align: center;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .feature-card {
-            background-color: var(--bg-card);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 15px var(--shadow);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px var(--shadow);
-        }
-
         .how-it-works {
             background-color: var(--bg-secondary);
         }
 
+        .how-it-works-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-top: 50px;
+        }
+
         .steps-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
         .step {
             background-color: var(--bg-card);
-            padding: 60px 30px 30px 30px;
+            padding: 60px 25px 25px 25px;
             border-radius: 15px;
             text-align: center;
             position: relative;
@@ -306,10 +292,75 @@
             z-index: 10;
         }
 
-        .step .feature-icon {
-            font-size: 2.5rem;
-            margin-top: 10px;
-            margin-bottom: 15px;
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 0.95rem;
+        }
+
+        .features-list-section {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .features-list-section h3 {
+            color: var(--accent-primary);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: start;
+            gap: 15px;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon-bullet {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-primary);
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .feature-content p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 968px) {
+            .how-it-works-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         .impact-section {
@@ -864,50 +915,70 @@
     <section class="how-it-works" id="how-it-works">
         <div class="container">
             <h2>How It Works</h2>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Select Your Route</h3>
-                    <p>Choose your airport and destination.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Choose a Cause</h3>
-                    <p>Select a charity or cause to support.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Get Matched</h3>
-                    <p>Connect with a traveler on the same route.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Share & Impact</h3>
-                    <p>Share the ride, share the story, see your donation impact.</p>
-                </div>
-            </div>
 
-            <h3 style="margin-top: 60px; text-align: center;">Key Features</h3>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Instant Matching</h3>
-                    <p>Based on flight time and destination.</p>
+            <div class="how-it-works-layout">
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Select Your Route</h3>
+                        <p>Choose your airport and destination.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Choose a Cause</h3>
+                        <p>Select a charity or cause to support.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Get Matched</h3>
+                        <p>Connect with a traveler on the same route.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Share & Impact</h3>
+                        <p>Share the ride, share the story, see your donation impact.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>1.5M+ Charities</h3>
-                    <p>Integrated via secure API.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Real-Time Safety</h3>
-                    <p>Tracking and verified IDs.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Transparent Donations</h3>
-                    <p>Clear donation receipts.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Impact Dashboard</h3>
-                    <p>Track your community impact.</p>
+
+                <div class="features-list-section">
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        <li>
+                            <div class="feature-icon-bullet"></div>
+                            <div class="feature-content">
+                                <h4>Instant Matching</h4>
+                                <p>Based on flight time and destination.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-icon-bullet"></div>
+                            <div class="feature-content">
+                                <h4>1.5M+ Charities</h4>
+                                <p>Integrated via secure API.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-icon-bullet"></div>
+                            <div class="feature-content">
+                                <h4>Real-Time Safety</h4>
+                                <p>Tracking and verified IDs.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-icon-bullet"></div>
+                            <div class="feature-content">
+                                <h4>Transparent Donations</h4>
+                                <p>Clear donation receipts.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-icon-bullet"></div>
+                            <div class="feature-content">
+                                <h4>Impact Dashboard</h4>
+                                <p>Track your community impact.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
