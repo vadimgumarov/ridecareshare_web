@@ -857,23 +857,6 @@
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    <div class="form-group">
-                        <label>I'm interested in:</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="drive" name="interest" value="drive">
-                                <label for="drive">I'd like to drive.</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="ride" name="interest" value="ride">
-                                <label for="ride">I'd like to ride.</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="both" name="interest" value="both">
-                                <label for="both">Both.</label>
-                            </div>
-                        </div>
-                    </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Join Waitlist</button>
                 </form>
             </div>
@@ -949,12 +932,6 @@
 
             // Prepare form data for FormSpree
             const formData = new FormData(e.target);
-
-            // Add interests as a formatted string
-            const interests = Array.from(document.querySelectorAll('input[name="interest"]:checked'))
-                .map(cb => cb.value)
-                .join(', ');
-            formData.append('interests', interests || 'Not specified');
 
             try {
                 // Submit to FormSpree
