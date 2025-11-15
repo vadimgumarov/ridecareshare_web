@@ -15,6 +15,7 @@
     <meta property="og:url" content="https://ridecareshare.com">
 
     <title>RideCareShare - Share Rides. Share Stories. Support Causes.</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg">
     <style>
         * {
             margin: 0;
@@ -23,31 +24,44 @@
         }
 
         :root {
-            --bg-primary: #f5f3f0;
-            --bg-secondary: #e8e5df;
-            --bg-card: #fdfcfa;
-            --text-primary: #3a3a3a;
-            --text-secondary: #6b6b6b;
-            --accent-primary: #9db4ab;
-            --accent-secondary: #b8a99d;
-            --accent-tertiary: #d4b5a8;
-            --border-color: #d4cdc6;
-            --shadow: rgba(97, 97, 97, 0.1);
-            --link-color: #7a9d8f;
+            /* Primary Brand Colors (from logo) */
+            --primary-blue-dark: #0768E9;
+            --primary-blue-light: #3B9AF8;
+            --primary-blue-medium: #2481F0;
+
+            /* Backgrounds */
+            --bg-primary: #F8FAFB;
+            --bg-secondary: #E8F1F8;
+            --bg-card: #FFFFFF;
+
+            /* Text */
+            --text-primary: #2A2A2A;
+            --text-secondary: #5A6C7D;
+
+            /* Accents */
+            --accent-primary: #0768E9;
+            --accent-secondary: #3B9AF8;
+            --accent-tertiary: #6BB6FF;
+
+            /* Borders & Shadows */
+            --border-color: #D1E3F3;
+            --shadow: rgba(7, 104, 233, 0.12);
+            --link-color: #0768E9;
         }
 
         [data-theme="dark"] {
-            --bg-primary: #2a2a2a;
-            --bg-secondary: #353535;
-            --bg-card: #3a3a3a;
-            --text-primary: #e8e5df;
-            --text-secondary: #b8b5af;
-            --accent-primary: #7a9d8f;
-            --accent-secondary: #9d8b7a;
-            --accent-tertiary: #a88b7d;
-            --border-color: #4a4a4a;
+            /* Dark theme - adjusted for logo colors */
+            --bg-primary: #1A1F2E;
+            --bg-secondary: #232A3C;
+            --bg-card: #2A3348;
+            --text-primary: #E8F1F8;
+            --text-secondary: #A8B8C8;
+            --accent-primary: #3B9AF8;
+            --accent-secondary: #6BB6FF;
+            --accent-tertiary: #8AC9FF;
+            --border-color: #3A4A5E;
             --shadow: rgba(0, 0, 0, 0.3);
-            --link-color: #9db4ab;
+            --link-color: #6BB6FF;
         }
 
         body {
@@ -81,9 +95,14 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--accent-primary);
+            height: 50px;
+            display: block;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            display: block;
         }
 
         .theme-toggle {
@@ -607,7 +626,9 @@
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo">RideCareShare</div>
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="RideCareShare - Share Rides. Share Stories. Support Causes." id="logoImg">
+            </a>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                 <span id="themeIcon">☾</span>
             </button>
@@ -899,6 +920,7 @@
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
         const themeIcon = document.getElementById('themeIcon');
+        const logoImg = document.getElementById('logoImg');
 
         const savedTheme = localStorage.getItem('theme') || 'light';
         html.setAttribute('data-theme', savedTheme);
@@ -907,7 +929,7 @@
         themeToggle.addEventListener('click', () => {
             const currentTheme = html.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
+
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
@@ -916,8 +938,10 @@
         function updateThemeIcon(theme) {
             if (theme === 'dark') {
                 themeIcon.textContent = '☀';
+                logoImg.src = 'assets/images/logo-dark.png';
             } else {
                 themeIcon.textContent = '☾';
+                logoImg.src = 'assets/images/logo.png';
             }
         }
 
