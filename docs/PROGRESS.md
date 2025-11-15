@@ -82,3 +82,11 @@
 - JavaScript event listeners for open/close functionality
 - Accessibility features: ARIA labels, keyboard navigation support
 - No external dependencies - pure HTML/CSS/JavaScript implementation
+
+### Refinements and Fixes
+- Fixed DOM access errors by repositioning modal HTML before script tag
+- Removed blue color from strong tags for consistent text appearance
+- Reduced line-height from 1.8 to 1.5 for better readability
+- Reduced paragraph spacing from 20px to 12px to minimize scrolling
+- Fixed modal positioning to show rounded corners at top and bottom
+- Replaced AI-generated content with correct user-provided story text
