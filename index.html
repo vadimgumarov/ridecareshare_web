@@ -209,37 +209,76 @@
             background-color: var(--bg-secondary);
         }
 
-        .crisis-grid {
+        /* Crisis Showcase - Two Column Layout */
+        .crisis-showcase {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
             margin-top: 50px;
         }
 
-        .crisis-card {
+        .crisis-list-section {
             background-color: var(--bg-card);
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px var(--shadow);
-            transition: transform 0.3s ease;
         }
 
-        .crisis-card:hover {
-            transform: translateY(-5px);
+        .crisis-list {
+            list-style: none;
         }
 
-        .crisis-number {
-            font-size: 2rem;
+        .crisis-list li {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: start;
+            gap: 15px;
+        }
+
+        .crisis-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .crisis-list li:first-child {
+            padding-top: 0;
+        }
+
+        .crisis-number-bullet {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-primary);
+            color: var(--bg-card);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
             font-weight: bold;
-            color: var(--accent-tertiary);
-            margin-bottom: 15px;
+            flex-shrink: 0;
+            margin-top: 5px;
         }
 
-        .crisis-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--accent-primary);
-            margin-bottom: 15px;
+        .crisis-content h4 {
+            color: var(--text-primary);
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .crisis-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 968px) {
+            .crisis-showcase {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }
 
         .solution-section {
@@ -889,21 +928,40 @@
     <section class="problem-section">
         <div class="container">
             <h2>Three Crises, One Simple Solution.</h2>
-            <div class="crisis-grid">
-                <div class="crisis-card">
-                    <div class="crisis-number">1</div>
-                    <div class="crisis-title">Loneliness is a Public Health Epidemic.</div>
-                    <p>The US Surgeon General reports isolation is as harmful as smoking 15 cigarettes a day.</p>
+
+            <div class="crisis-showcase">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            App Preview<br>Coming Soon
+                        </div>
+                    </div>
                 </div>
-                <div class="crisis-card">
-                    <div class="crisis-number">2</div>
-                    <div class="crisis-title">Airport Rides Are Expensive.</div>
-                    <p>$50–$80 for a 30-minute trip is the norm—surge pricing makes it worse.</p>
-                </div>
-                <div class="crisis-card">
-                    <div class="crisis-number">3</div>
-                    <div class="crisis-title">Communities Are Disconnected.</div>
-                    <p>84% of Americans say they feel no connection to their neighborhoods or cities.</p>
+
+                <div class="crisis-list-section">
+                    <ul class="crisis-list">
+                        <li>
+                            <div class="crisis-number-bullet">1</div>
+                            <div class="crisis-content">
+                                <h4>Loneliness is a Public Health Epidemic.</h4>
+                                <p>The US Surgeon General reports isolation is as harmful as smoking 15 cigarettes a day.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="crisis-number-bullet">2</div>
+                            <div class="crisis-content">
+                                <h4>Airport Rides Are Expensive.</h4>
+                                <p>$50–$80 for a 30-minute trip is the norm—surge pricing makes it worse.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="crisis-number-bullet">3</div>
+                            <div class="crisis-content">
+                                <h4>Communities Are Disconnected.</h4>
+                                <p>84% of Americans say they feel no connection to their neighborhoods or cities.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
