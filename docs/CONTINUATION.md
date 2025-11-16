@@ -1,32 +1,48 @@
 # CONTINUATION.md - RideCareShare Website
 
 ## Current Status
-- Working on: Website fully functional with all recent improvements deployed
+- Working on: Website pre-launch landing page - fully functional and deployed
 - Branch: main
-- Test Status: All core functionality tested and verified (waitlist form, domain redirects, social media links, founder story modal)
-- Last session: Completed founder story modal with user-provided content, fixed styling and readability issues
-- Current focus: All features complete and deployed - ready for next phase of improvements
+- Test Status: Manual testing complete (all core functionality verified)
+- Last session: Major UI overhaul implementing consistent two-column design pattern across all sections, integrated app screenshots
+- Current focus: All features complete and deployed - awaiting remaining app screenshots (donation screen, matched screen)
 
 ## Immediate Next Steps
-1. Continue with additional UI improvements as needed
-2. Consider adding logo/branding images
-3. Evaluate analytics integration (privacy-friendly options like Plausible or Fathom)
-4. Test on additional browsers (Firefox, Edge) for full compatibility
-5. Review accessibility with automated tools (Lighthouse audit)
+1. Add donation screen to Purposeful Mobility section when provided
+2. Add matched/congrats screen to Early Voices section when provided
+3. Consider additional UI refinements based on user feedback
+4. Optional: Add analytics (privacy-friendly: Plausible or Fathom)
+5. Optional: Review accessibility with Lighthouse audit
 
 ## Context & Recent Decisions
-- **Founder Story Modal - Completed (2025-11-14)**:
-  - Changed heading from "Why We Built RideCareShare" to "Why RideCareShare"
-  - Converted "Read Our Story" link to button for better UX
-  - Created modal overlay with user's provided narrative
-  - Implemented smooth animations, multiple close methods, theme support
-  - Mobile-responsive design with proper padding and font sizing
-  - Accessibility features included (ARIA labels, keyboard support)
-  - Fixed DOM access errors (modal HTML positioned before script)
-  - Improved readability: reduced line-height (1.5), paragraph spacing (12px), font-size (1.05rem)
-  - Removed blue color from strong tags for consistent text appearance
-  - Fixed positioning to show rounded corners at top and bottom
-  - Corrected content to use exact user-provided text (not AI-generated)
+- **Design Pattern Established (2025-11-15)**: All showcase sections now follow consistent two-column layout
+  - Grid layout: 1fr 1fr with 60px gap
+  - Phone mockup in one column (alternating left/right sides)
+  - Content card in other column with section heading, list format, border separators
+  - Mobile responsive: columns stack vertically
+  - Phone mockups use gradient border (#3B9AF8 to #5DB0FA)
+
+- **Section Restructuring Completed**:
+  - **Three Crises, One Simple Solution**: Phone (2-options screen) left, crisis list right
+  - **Purposeful Mobility**: Text left, phone (placeholder for donation screen) right
+  - **How It Works**: Steps 1-4 left (2x2 grid), Key Features list right
+  - **Every Ride Creates Ripples**: Phone (signup screen) left, impact stats right
+  - **Early Voices**: Testimonial cards left, phone (placeholder for matched screen) right
+
+- **Content Refinements**:
+  - Changed "Read Our Story" to "Read The Story"
+  - Converted cards to list format throughout (cleaner, more scannable)
+  - Reduced Key Features from 5 to 4 items (better alignment with 4 steps)
+  - Combined "Impact Dashboard" + "1.5M+ Charities" into single feature
+  - Renamed "Real-Time Safety" to "Verified Safety" (removed PII tracking references)
+  - Moved section headings into text columns, centered within columns
+  - Centered all h2 headings globally
+
+- **App Screenshots Integrated**:
+  - **Three Crises**: app-2-options.png (I need a ride / I am driving buttons)
+  - **Every Ride**: app-signup.png (logo, login, create account)
+  - Images properly sized with CSS :has(img) selector removing padding
+  - Remaining: donation screen, matched/congrats screen
 
 - **Deployment Status**: Website fully deployed and operational
   - Primary domain: ridecareshare.com (live with HTTPS)
@@ -36,91 +52,69 @@
 - **Email Integration**: FormSpree configured and tested
   - Endpoint: https://formspree.io/f/xjkjknbp
   - Sends to: hello@ridecareshare.com
-  - Free tier: 50 submissions/month with dashboard and spam filtering
-  - Upgrade path: $10/month for 1,000 submissions if needed
+  - Free tier: 50 submissions/month
 
 - **Social Media**: All accounts created and linked
-  - Facebook Business Page: https://www.facebook.com/profile.php?id=61583547277956
+  - Facebook: https://www.facebook.com/profile.php?id=61583547277956
   - Instagram: https://www.instagram.com/ridecareshare/
-  - X (Twitter): https://x.com/ridecareshare
+  - X: https://x.com/ridecareshare
   - YouTube: @RideCareShareCommunications
 
-- **DNS Architecture**:
-  - Network Solutions handles ridecareshare.com DNS (4 A records to GitHub Pages)
-  - Cloudflare handles ridecaretogether.com (nameservers transferred, 301 redirect configured)
-  - Decision: Cloudflare chosen over paid registrar forwarding (free, professional, includes SSL)
+- **Color Scheme**: #3B9AF8 primary blue with neutral gray backgrounds
 
-- **SEO**: Meta tags added for search engines and social media sharing
-  - Description, keywords, author, contact meta tags
-  - Open Graph tags for Facebook/Twitter/LinkedIn preview cards
-
-- **Architecture**: Static single-page HTML approach maintained
-  - No build process required
-  - Fast deployment (push → live in 1-2 minutes)
-  - ~50KB total file size after modal addition (excellent performance)
+- **Logo**: Vertical version (logo.png for light theme, logo-dark.png for dark theme)
 
 ## Test Status & Coverage
-- Manual testing: Completed successfully
-  - Waitlist form: Tested and verified (submission received at hello@ridecareshare.com)
-  - Domain redirects: Both ridecareshare.com and ridecaretogether.com working
-  - Social media links: All four platforms verified
-  - Theme toggle: Light/dark mode functioning correctly
-  - Responsive design: Tested on mobile (iPhone) and desktop
-  - Founder story modal: Tested (open/close, animations, theme compatibility, readability)
-- Browser testing: Completed on Chrome and Safari
+- Manual testing: Comprehensive testing completed
+  - Waitlist form: Tested and verified
+  - Domain redirects: Both domains working
+  - Social media links: All verified
+  - Theme toggle: Light/dark mode functioning
+  - Responsive design: Tested on mobile and desktop
+  - Founder story modal: All interactions tested
+  - Two-column layouts: Responsive breakpoints verified
+  - Phone mockups: Image display and sizing verified
+- Browser testing: Chrome and Safari tested
 - Performance: <1 second load time confirmed
-- HTTPS: Enabled and verified on both custom domains
+- HTTPS: Enabled on both custom domains
 
 ## Session Handoff Notes
-- **Production Status**: Website is live and fully functional - all features deployed
-- **Modal Feature Complete**: All issues resolved (DOM errors, styling, readability, correct content)
-- **Browser Caching Note**: Users may need hard refresh (Cmd+Shift+R) or clear cache to see latest changes
-- **Next Phase**: Ready for additional UI/UX improvements or new features
-  - No critical bugs or issues identified
-  - All core features working as expected
-  - Safe to make visual/content changes without breaking functionality
+- **Production Status**: Website fully functional and live
+- **Pending Assets**:
+  - Donation screen for Purposeful Mobility section
+  - Matched/congrats screen for Early Voices section
+- **Browser Caching**: Users may need hard refresh (Cmd+Shift+R) to see latest changes
+- **FormSpree Dashboard**: https://formspree.io/forms/xjkjknbp/submissions (0/50 used)
+- **No Critical Issues**: All features working as expected
+- **Safe to Deploy**: All changes tested and verified before pushing
 
-- **FormSpree Dashboard**: Access at https://formspree.io/forms/xjkjknbp/submissions
-  - Monitor submission count (currently 0/50 used)
-  - Will receive email warning at 40 submissions (80% threshold)
-  - Export capability available for CSV/Excel if needed
+## Recent Commits (2025-11-15)
+- e971b85: fix: remove padding from phone screens with images
+- e8b0a0f: feat: add app screenshots and restructure Early Voices
+- 18e0dfc: fix: clean up Every Ride section
+- 8c0d2fb: feat: move section headings to text columns
+- 4bcd4bd: feat: restructure Three Crises section
+- d3e40f9: fix: align bottom of How It Works columns
+- 380ef8e: fix: center all section headings
+- 227bb1a: fix: refine Key Features list
+- 9d7c75c: feat: restructure How It Works
+- 5ab1583: feat: restructure solution section
+- 0c93df1: fix: change 'Read Our Story' to 'Read The Story'
 
-- **Deployment Workflow**:
-  - Make changes to index.html
-  - Commit and push to main branch
-  - GitHub Pages auto-deploys in 1-2 minutes
-  - No build process or manual deployment steps required
-  - Users may need to clear browser cache to see changes immediately
+## Architecture Notes
+- Static HTML/CSS/JavaScript (no build process)
+- Single index.html file (~50KB)
+- Fast deployment: push to main → live in 1-2 minutes
+- Assets: assets/images/ (logo files, app screenshots)
 
-- **Documentation**: All guides up to date
-  - GitHub Pages deployment: docs/deployment/github-pages.md
-  - Domain configuration: docs/deployment/domain-setup.md
-  - Social media strategy: docs/social-media/deployment-plan.md
-  - Progress log: docs/PROGRESS.md (updated with modal feature completion)
-
-- **Future Considerations**:
-  - Logo/branding: Assets exist in assets/images/ (logo.png, logo-dark.png, logo-icon.svg)
-  - Color scheme: Updated to match logo (#3B9AF8 primary blue with gray accents)
-  - Analytics: Consider privacy-friendly options (Plausible ~$9/month, Fathom ~$14/month, or free self-hosted)
-  - Video content: 60-second explainer mentioned on site but not created yet
-  - Testimonials: Currently placeholder content, need real user feedback
-  - A/B testing: Consider different headlines/messaging once traffic increases
-
-## Known Issues
-- None identified
-- Website is production-ready and fully functional
-- All integrations tested and verified
-- Modal feature complete with correct content
-
-## Recent Commits (2025-11-14)
-- a11e545: feat: add founder story overlay modal
-- 5c1312b: docs: update progress and continuation for modal feature
-- 1d16c91: fix: move modal HTML before script to resolve DOM access errors
-- 666a255: fix: improve modal readability and visibility
-- 05e4faf: fix: replace modal story with correct user-provided content
+## Future Considerations
+- Analytics: Privacy-friendly options (Plausible, Fathom)
+- Video content: 60-second explainer video
+- Testimonials: Real user feedback needed
+- Accessibility audit: Lighthouse review
 
 ---
 
-**Last Updated**: 2025-11-14
-**Status**: Production-ready, all features complete and deployed
-**Next Milestone**: Continue UI improvements and content enhancements as needed
+**Last Updated**: 2025-11-15
+**Status**: Production-ready, awaiting final app screenshots
+**Next Milestone**: Add remaining screenshots, continue content refinements

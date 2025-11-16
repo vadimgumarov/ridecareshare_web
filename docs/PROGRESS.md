@@ -90,3 +90,11 @@
 - Reduced paragraph spacing from 20px to 12px to minimize scrolling
 - Fixed modal positioning to show rounded corners at top and bottom
 - Replaced AI-generated content with correct user-provided story text
+
+---
+
+## 2025-11-15
+- Completed: Website UI overhaul - consistent two-column design pattern across all sections
+- Tests: Manual browser testing (responsive layouts, image display, column alignment)
+- Performance: Added app screenshots (~400KB), load time still <1s
+- Discovered: Two-column pattern with phone mockups creates cohesive, professional design
