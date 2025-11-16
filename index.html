@@ -515,14 +515,22 @@
         }
 
         .testimonials {
-            background-color: var(--bg-primary);
+            background-color: var(--bg-secondary);
         }
 
-        .testimonial-grid {
+        /* Testimonials Showcase - Two Column Layout */
+        .testimonials-showcase {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
             margin-top: 50px;
+        }
+
+        .testimonial-cards-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
         }
 
         .testimonial-card {
@@ -536,8 +544,15 @@
         .testimonial-text {
             font-style: italic;
             color: var(--text-secondary);
-            margin-bottom: 15px;
+            margin-bottom: 0;
             font-size: 1.1rem;
+        }
+
+        @media (max-width: 968px) {
+            .testimonials-showcase {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }
 
         .waitlist-section {
@@ -823,6 +838,14 @@
             font-size: 1rem;
             text-align: center;
             padding: 20px;
+            overflow: hidden;
+        }
+
+        .phone-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
         }
 
         @media (max-width: 968px) {
@@ -976,7 +999,7 @@
                 <div class="phone-mockup">
                     <div class="phone-frame">
                         <div class="phone-screen">
-                            App Preview<br>Coming Soon
+                            <img src="assets/images/app-2-options.png" alt="RideCareShare App - Choose your option">
                         </div>
                     </div>
                 </div>
@@ -1108,7 +1131,7 @@
                 <div class="phone-mockup">
                     <div class="phone-frame">
                         <div class="phone-screen">
-                            App Preview<br>Coming Soon
+                            <img src="assets/images/app-signup.png" alt="RideCareShare App - Sign Up">
                         </div>
                     </div>
                 </div>
@@ -1160,15 +1183,25 @@
     <section class="testimonials">
         <div class="container">
             <h2>Early Voices</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"I met my new business partner on a RideCareShare trip."</p>
+            <div class="testimonials-showcase">
+                <div class="testimonial-cards-section">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"I met my new business partner on a RideCareShare trip."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The best $20 I ever donated — a great ride and a new friend."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"It feels good to know your trip supports something real."</p>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The best $20 I ever donated — a great ride and a new friend."</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"It feels good to know your trip supports something real."</p>
+
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            Matched Screen<br>Coming Soon
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
