@@ -88,9 +88,21 @@
         }
 
         .header-content {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
+            gap: 20px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .header-right {
+            display: flex;
+            justify-content: flex-end;
         }
 
         .logo {
@@ -278,6 +290,24 @@
         }
 
         @media (max-width: 968px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .header-buttons {
+                order: 2;
+            }
+
+            .header-right {
+                order: 1;
+                justify-content: flex-end;
+            }
+
+            .logo {
+                order: 0;
+            }
+
             .crisis-showcase {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -979,9 +1009,15 @@
             <a href="#" class="logo">
                 <img src="assets/images/logo.png" alt="RideCareShare - Share Rides. Share Stories. Support Causes." id="logoImg">
             </a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span id="themeIcon">☾</span>
-            </button>
+            <div class="header-buttons">
+                <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
+                <a href="#how-it-works" class="btn btn-secondary">How This Works</a>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span id="themeIcon">☾</span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -989,10 +1025,6 @@
         <div class="container">
             <h1>Share Rides. Share Stories. Support Causes.</h1>
             <p class="subtitle">The world's first <span class="highlight">donation-powered airport carpooling app</span> that turns travel into community building.</p>
-            <div class="cta-buttons">
-                <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
-                <a href="#how-it-works" class="btn btn-secondary">How This Works</a>
-            </div>
         </div>
     </section>
 
