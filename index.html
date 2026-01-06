@@ -532,7 +532,16 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
-            align-items: start;
+            align-items: stretch;
+        }
+
+        .founder-story {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .founder-story .founder-content {
+            flex: 1;
         }
 
         .founder-story h2,
@@ -548,20 +557,26 @@
         }
 
         .waitlist-column {
+            display: flex;
+            flex-direction: column;
             background-color: var(--bg-card);
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px var(--shadow);
         }
 
+        .waitlist-column .waitlist-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
         .waitlist-column .subtitle {
             color: var(--text-secondary);
             margin-bottom: 25px;
-        }
-
-        .waitlist-column .waitlist-form {
-            margin: 0 auto;
-            max-width: 100%;
         }
 
         @media (max-width: 968px) {
