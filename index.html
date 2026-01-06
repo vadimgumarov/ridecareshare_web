@@ -555,23 +555,60 @@
             box-shadow: 0 4px 15px var(--shadow);
             display: flex;
             flex-direction: column;
-            justify-content: center;
         }
 
         .founder-content .quote {
             flex: 1;
         }
 
-        .founder-content {
-            justify-content: flex-start;
+        .waitlist-story .waitlist-form {
+            justify-content: space-between;
+        }
+
+        .waitlist-story .form-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
         }
 
         .waitlist-story .form-group {
             width: 100%;
+            margin-bottom: 20px;
         }
 
         .waitlist-story input {
             width: 100%;
+            padding: 14px 16px;
+            font-size: 1rem;
+            border: 1px solid var(--border-color, #ddd);
+            border-radius: 8px;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: border-color 0.2s ease;
+        }
+
+        .waitlist-story input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .waitlist-story input::placeholder {
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        .waitlist-story label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .waitlist-story .form-privacy {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
         }
 
         @media (max-width: 968px) {
@@ -1394,17 +1431,19 @@
                 <div class="waitlist-story">
                     <h2>Sign up today</h2>
                     <div class="waitlist-form">
+                        <p class="form-subtitle">Get early access and exclusive updates.</p>
                         <form id="waitlistForm">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
                             </div>
                             <button type="submit" class="btn btn-primary" style="width: 100%;">Join Waitlist</button>
                         </form>
+                        <p class="form-privacy">We respect your privacy. Unsubscribe anytime.</p>
                     </div>
                 </div>
             </div>
