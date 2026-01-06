@@ -318,6 +318,58 @@
             text-align: center;
         }
 
+        /* Key Features Section */
+        .key-features-section {
+            background-color: var(--bg-secondary);
+        }
+
+        .key-features-section h2 {
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 968px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 580px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .how-it-works {
             background-color: var(--bg-secondary);
         }
@@ -1234,6 +1286,34 @@
         </div>
     </section>
 
+    <section class="key-features-section">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Instant Matching</h4>
+                    <p>Based on flight time and destination.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💝</div>
+                    <h4>Charities & Impact Tracking</h4>
+                    <p>Track total impact and your personal contribution.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Verified Safety</h4>
+                    <p>Verified IDs and background checks.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📋</div>
+                    <h4>Transparent Donations</h4>
+                    <p>Clear donation receipts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="solution-section">
         <div class="container">
             <div class="crisis-showcase">
@@ -1283,39 +1363,6 @@
                     </div>
                 </div>
 
-                <div class="features-list-section">
-                    <h3>Key Features</h3>
-                    <ul class="features-list">
-                        <li>
-                            <div class="feature-icon-bullet"></div>
-                            <div class="feature-content">
-                                <h4>Instant Matching</h4>
-                                <p>Based on flight time and destination.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon-bullet"></div>
-                            <div class="feature-content">
-                                <h4>Charities & Impact Tracking</h4>
-                                <p>Track total impact and your personal contribution.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon-bullet"></div>
-                            <div class="feature-content">
-                                <h4>Verified Safety</h4>
-                                <p>Verified IDs and background checks.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon-bullet"></div>
-                            <div class="feature-content">
-                                <h4>Transparent Donations</h4>
-                                <p>Clear donation receipts.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
 
             <!-- How It Works Screenshots Row -->
