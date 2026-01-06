@@ -603,9 +603,18 @@
         }
 
         .quote-author {
-            text-align: right;
             color: var(--accent-primary);
             font-weight: bold;
+            margin: 0;
+        }
+
+        .quote-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .testimonials {
@@ -1383,8 +1392,8 @@
                     <h2>Why RideCareShare</h2>
                     <div class="founder-content">
                         <p class="quote">"Flying home should be the best part of any journey. Instead, it ends with an expensive, awkward ride where forced pleasantries benefit no one except a distant corporation's bottom line. But it doesn't have to be this way. RideCareShare was born from the belief that technology can do better—that it can bring people together around shared purpose, turn strangers into neighbors, and transform every homecoming into something that strengthens community rather than depletes it."</p>
-                        <p class="quote-author">— Vadim, Creator of RideCareShare</p>
-                        <div class="cta-buttons" style="margin-top: 30px;">
+                        <div class="quote-footer">
+                            <p class="quote-author">— Vadim, Creator of RideCareShare</p>
                             <button id="readStoryBtn" class="btn btn-secondary">Read The Story</button>
                         </div>
                     </div>
