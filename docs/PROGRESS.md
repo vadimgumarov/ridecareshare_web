@@ -1,27 +1,45 @@
 # PROGRESS.md - RideCareShare Website
 
 ## 2026-01-05
-- Completed: Key Features section redesign with app screenshot snippets
+- Completed: Major page restructuring and UI improvements
 - Tests: Manual browser testing (layout alignment, responsive design)
-- Performance: Added 4 feature screenshots (~500KB total), load time still <1s
+- Performance: Added multiple screenshots, load time still <1s
 
 ### Accomplishments
-- Moved Key Features to standalone section under "One Simple Solution for:"
-- Replaced emoji icons with actual app screenshot snippets:
-  - Instant Matching: flight matching screenshot
-  - Impact Tracking: donations/contributions screenshot
-  - Verified Safety: safety verification screenshot
-  - Transparent Donations: charity selection screenshot
-- Implemented flexbox layout for horizontal alignment:
-  - Text content (title + description) aligned at top
-  - Screenshot snippets aligned horizontally at bottom
+
+**Key Features Section:**
+- Moved to standalone section under "One Simple Solution for:"
+- Replaced emoji icons with app screenshot snippets (bottom-aligned)
 - Renamed "Charities & Impact Tracking" to "Impact Tracking"
 
+**How It Works Section:**
+- Moved screenshots inside step cards (no separate row)
+- Changed from 2x2 grid to 4 columns in one row
+- Screenshots bottom-aligned using flexbox
+
+**Share the Ride Section (formerly Purposeful Mobility):**
+- Renamed to "Share the Ride. Share the Impact."
+- Merged "Every Ride Creates Ripples of Good" stats into this section
+- Left-aligned description text with professional copy
+- Added "Projected Impact" header with separator
+- Replaced phone mockup with Early Voices testimonials
+- Added account profile screenshot below testimonials
+- Added 4th testimonial for column alignment
+
+**Story Section:**
+- Changed background from --bg-secondary to --bg-primary (lighter)
+- Visual separation from How It Works section
+
+**Content Updates:**
+- Added text about secure in-app messaging and location sharing
+- Fixed typos (Million, adoption, believes)
+- Professional copy refinements throughout
+
 ### Technical Details
-- Feature cards use `display: flex; flex-direction: column`
-- `margin-top: auto` on snippets pushes them to bottom
-- 4-column responsive grid (2 on tablet, 1 on mobile)
-- Images: feature-instant-matching.png, feature-donations.png, feature-safety.png, feature-charities.png
+- Flexbox with `margin-top: auto` for bottom-aligned screenshots
+- 4-column responsive grids (2 on tablet, 1 on mobile)
+- New images: feature-account.png
+- Removed unused CSS for phone-mockup-small elements
 
 ---
 
