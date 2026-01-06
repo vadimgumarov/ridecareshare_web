@@ -562,25 +562,24 @@
         .waitlist-column {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             background-color: var(--bg-card);
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px var(--shadow);
         }
 
+        .waitlist-column .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
         .waitlist-column .waitlist-form {
-            margin: 0;
+            margin-top: auto;
             max-width: 100%;
             background: none;
             padding: 0;
             border-radius: 0;
             box-shadow: none;
-        }
-
-        .waitlist-column .subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 25px;
         }
 
         @media (max-width: 968px) {
