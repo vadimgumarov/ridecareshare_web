@@ -881,6 +881,52 @@
             border-radius: 30px;
         }
 
+        /* Small phone mockups for How It Works section */
+        .how-it-works-screenshots {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .phone-mockup-small {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone-frame-small {
+            width: 140px;
+            height: 280px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 20px;
+            padding: 6px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .phone-screen-small {
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-card);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .phone-screen-small img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .step-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
         @media (max-width: 968px) {
             .app-showcase {
                 grid-template-columns: 1fr;
@@ -1150,6 +1196,42 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- How It Works Screenshots Row -->
+            <div class="how-it-works-screenshots">
+                <div class="phone-mockup-small">
+                    <div class="phone-frame-small">
+                        <div class="phone-screen-small">
+                            <img src="assets/images/app-step1-browse.png" alt="Step 1: Browse Rides">
+                        </div>
+                    </div>
+                    <span class="step-label">1. Browse</span>
+                </div>
+                <div class="phone-mockup-small">
+                    <div class="phone-frame-small">
+                        <div class="phone-screen-small">
+                            <img src="assets/images/app-step2-details.png" alt="Step 2: Ride Details">
+                        </div>
+                    </div>
+                    <span class="step-label">2. Details</span>
+                </div>
+                <div class="phone-mockup-small">
+                    <div class="phone-frame-small">
+                        <div class="phone-screen-small">
+                            <img src="assets/images/app-step3-charity.png" alt="Step 3: Choose Charity">
+                        </div>
+                    </div>
+                    <span class="step-label">3. Charity</span>
+                </div>
+                <div class="phone-mockup-small">
+                    <div class="phone-frame-small">
+                        <div class="phone-screen-small">
+                            <img src="assets/images/app-step4-success.png" alt="Step 4: Success">
+                        </div>
+                    </div>
+                    <span class="step-label">4. Success</span>
                 </div>
             </div>
         </div>
