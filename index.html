@@ -535,30 +535,7 @@
             align-items: stretch;
         }
 
-        .founder-story {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .founder-story h2,
-        .waitlist-column h2 {
-            text-align: left;
-        }
-
-        .founder-content {
-            flex: 1;
-            background-color: var(--bg-card);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px var(--shadow);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .founder-content .quote {
-            flex: 1;
-        }
-
+        .founder-content,
         .waitlist-column {
             display: flex;
             flex-direction: column;
@@ -566,6 +543,15 @@
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .founder-content h2,
+        .waitlist-column h2 {
+            text-align: left;
+        }
+
+        .founder-content .quote {
+            flex: 1;
         }
 
         .waitlist-column .subtitle {
@@ -588,7 +574,7 @@
                 gap: 40px;
             }
 
-            .founder-story h2,
+            .founder-content h2,
             .waitlist-column h2 {
                 text-align: center;
             }
@@ -1388,14 +1374,12 @@
     <section class="founder-section" id="waitlist">
         <div class="container">
             <div class="founder-layout">
-                <div class="founder-story">
+                <div class="founder-content">
                     <h2>Why RideCareShare</h2>
-                    <div class="founder-content">
-                        <p class="quote">"Flying home should be the best part of any journey. Instead, it ends with an expensive, awkward ride where forced pleasantries benefit no one except a distant corporation's bottom line. But it doesn't have to be this way. RideCareShare was born from the belief that technology can do better—that it can bring people together around shared purpose, turn strangers into neighbors, and transform every homecoming into something that strengthens community rather than depletes it."</p>
-                        <div class="quote-footer">
-                            <p class="quote-author">— Creator of RideCareShare</p>
-                            <button id="readStoryBtn" class="btn btn-secondary">Read The Story</button>
-                        </div>
+                    <p class="quote">"Flying home should be the best part of any journey. Instead, it ends with an expensive, awkward ride where forced pleasantries benefit no one except a distant corporation's bottom line. But it doesn't have to be this way. RideCareShare was born from the belief that technology can do better—that it can bring people together around shared purpose, turn strangers into neighbors, and transform every homecoming into something that strengthens community rather than depletes it."</p>
+                    <div class="quote-footer">
+                        <p class="quote-author">— Creator of RideCareShare</p>
+                        <button id="readStoryBtn" class="btn btn-secondary">Read The Story</button>
                     </div>
                 </div>
 
