@@ -1068,53 +1068,6 @@
             border-radius: 30px;
         }
 
-        /* Phone mockups for How It Works section */
-        .how-it-works-screenshots {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 50px;
-            flex-wrap: nowrap;
-        }
-
-        .phone-mockup-small {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .phone-frame-small {
-            width: 240px;
-            height: 480px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: 35px;
-            padding: 10px;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
-        }
-
-        .phone-screen-small {
-            width: 100%;
-            height: 100%;
-            background-color: var(--bg-card);
-            border-radius: 26px;
-            overflow: hidden;
-        }
-
-        .phone-screen-small img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 26px;
-        }
-
-        .step-label {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            margin-top: 5px;
-        }
-
         @media (max-width: 968px) {
             .app-showcase {
                 grid-template-columns: 1fr;
@@ -1367,56 +1320,23 @@
                         <div class="step-number">2</div>
                         <h3>Join the Ride</h3>
                         <p>Connect with a traveler on the same route.</p>
+                        <img src="assets/images/app-step2-details.png" alt="Step 2: Join the Ride" class="step-screenshot">
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <h3>Choose a Cause</h3>
                         <p>Select a charity or cause to support.</p>
+                        <img src="assets/images/app-step3-charity.png" alt="Step 3: Choose a Cause" class="step-screenshot">
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <h3>Share & Impact</h3>
                         <p>Share the ride, share the story, see your donation impact.</p>
+                        <img src="assets/images/app-step4-success.png" alt="Step 4: Share & Impact" class="step-screenshot">
                     </div>
                     </div>
                 </div>
 
-            </div>
-
-            <!-- How It Works Screenshots Row -->
-            <div class="how-it-works-screenshots">
-                <div class="phone-mockup-small">
-                    <div class="phone-frame-small">
-                        <div class="phone-screen-small">
-                            <img src="assets/images/app-step1-browse.png" alt="Step 1: Browse Rides">
-                        </div>
-                    </div>
-                    <span class="step-label">1. Select Your Route</span>
-                </div>
-                <div class="phone-mockup-small">
-                    <div class="phone-frame-small">
-                        <div class="phone-screen-small">
-                            <img src="assets/images/app-step2-details.png" alt="Step 2: Join the Ride">
-                        </div>
-                    </div>
-                    <span class="step-label">2. Join the Ride</span>
-                </div>
-                <div class="phone-mockup-small">
-                    <div class="phone-frame-small">
-                        <div class="phone-screen-small">
-                            <img src="assets/images/app-step3-charity.png" alt="Step 3: Choose a Cause">
-                        </div>
-                    </div>
-                    <span class="step-label">3. Choose a Cause</span>
-                </div>
-                <div class="phone-mockup-small">
-                    <div class="phone-frame-small">
-                        <div class="phone-screen-small">
-                            <img src="assets/images/app-step4-success.png" alt="Step 4: Share & Impact">
-                        </div>
-                    </div>
-                    <span class="step-label">4. Share & Impact</span>
-                </div>
             </div>
         </div>
     </section>
