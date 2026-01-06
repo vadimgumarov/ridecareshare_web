@@ -528,13 +528,52 @@
             background-color: var(--bg-secondary);
         }
 
+        .founder-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .founder-story h2,
+        .waitlist-column h2 {
+            text-align: left;
+        }
+
         .founder-content {
-            max-width: 800px;
-            margin: 0 auto;
             background-color: var(--bg-card);
-            padding: 50px;
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .waitlist-column {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .waitlist-column .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+        }
+
+        .waitlist-column .waitlist-form {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        @media (max-width: 968px) {
+            .founder-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .founder-story h2,
+            .waitlist-column h2 {
+                text-align: center;
+            }
         }
 
         .quote {
@@ -1318,36 +1357,38 @@
         </div>
     </section>
 
-    <section class="founder-section">
+    <section class="founder-section" id="waitlist">
         <div class="container">
-            <h2>Why RideCareShare</h2>
-            <div class="founder-content">
-                <p class="quote">"Flying home should be the best part of any journey. Instead, it ends with an expensive, awkward ride where forced pleasantries benefit no one except a distant corporation's bottom line. But it doesn't have to be this way. RideCareShare was born from the belief that technology can do better—that it can bring people together around shared purpose, turn strangers into neighbors, and transform every homecoming into something that strengthens community rather than depletes it."</p>
-                <p class="quote-author">— Vadim, Creator of RideCareShare</p>
-            </div>
-            <div class="cta-buttons" style="margin-top: 40px;">
-                <button id="readStoryBtn" class="btn btn-secondary">Read The Story</button>
-            </div>
-        </div>
-    </section>
+            <div class="founder-layout">
+                <div class="founder-story">
+                    <h2>Why RideCareShare</h2>
+                    <div class="founder-content">
+                        <p class="quote">"Flying home should be the best part of any journey. Instead, it ends with an expensive, awkward ride where forced pleasantries benefit no one except a distant corporation's bottom line. But it doesn't have to be this way. RideCareShare was born from the belief that technology can do better—that it can bring people together around shared purpose, turn strangers into neighbors, and transform every homecoming into something that strengthens community rather than depletes it."</p>
+                        <p class="quote-author">— Vadim, Creator of RideCareShare</p>
+                    </div>
+                    <div class="cta-buttons" style="margin-top: 40px;">
+                        <button id="readStoryBtn" class="btn btn-secondary">Read The Story</button>
+                    </div>
+                </div>
 
-    <section class="waitlist-section" id="waitlist">
-        <div class="container">
-            <h2>Be the First to Ride With Purpose.</h2>
-            <p class="subtitle">Sign up today to get early access, updates, and exclusive launch rewards. Together, we'll prove that connection and generosity can share the same road.</p>
-            
-            <div class="waitlist-form">
-                <form id="waitlistForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                <div class="waitlist-column">
+                    <h2>Be the First to Ride With Purpose.</h2>
+                    <p class="subtitle">Sign up today to get early access, updates, and exclusive launch rewards.</p>
+
+                    <div class="waitlist-form">
+                        <form id="waitlistForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Join Waitlist</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Join Waitlist</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
