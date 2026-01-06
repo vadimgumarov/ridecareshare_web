@@ -535,17 +535,19 @@
             align-items: stretch;
         }
 
-        .founder-story {
+        .founder-story,
+        .waitlist-story {
             display: flex;
             flex-direction: column;
         }
 
         .founder-story h2,
-        .waitlist-column h2 {
+        .waitlist-story h2 {
             text-align: left;
         }
 
-        .founder-content {
+        .founder-content,
+        .waitlist-column {
             flex: 1;
             background-color: var(--bg-card);
             padding: 40px;
@@ -560,26 +562,24 @@
         }
 
         .waitlist-column {
-            display: flex;
-            flex-direction: column;
-            background-color: var(--bg-card);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px var(--shadow);
-        }
-
-        .waitlist-column .subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 30px;
+            justify-content: center;
         }
 
         .waitlist-column .waitlist-form {
-            margin-top: auto;
-            max-width: 100%;
+            width: 100%;
             background: none;
             padding: 0;
             border-radius: 0;
             box-shadow: none;
+            margin: 0;
+        }
+
+        .waitlist-column .form-group {
+            width: 100%;
+        }
+
+        .waitlist-column input {
+            width: 100%;
         }
 
         @media (max-width: 968px) {
@@ -589,7 +589,7 @@
             }
 
             .founder-story h2,
-            .waitlist-column h2 {
+            .waitlist-story h2 {
                 text-align: center;
             }
         }
@@ -1399,21 +1399,22 @@
                     </div>
                 </div>
 
-                <div class="waitlist-column">
-                    <p class="subtitle">Sign up today to get early access and updates.</p>
-
-                    <div class="waitlist-form">
-                        <form id="waitlistForm">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Join Waitlist</button>
-                        </form>
+                <div class="waitlist-story">
+                    <h2>Sign up today</h2>
+                    <div class="waitlist-column">
+                        <div class="waitlist-form">
+                            <form id="waitlistForm">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Join Waitlist</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
