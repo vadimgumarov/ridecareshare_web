@@ -535,20 +535,9 @@
             align-items: stretch;
         }
 
-        .founder-story,
-        .waitlist-story {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .founder-story h2,
-        .waitlist-story h2 {
-            text-align: left;
-        }
-
-        .founder-content,
-        .waitlist-story .waitlist-form {
-            flex: 1;
+        /* Symmetric card styles */
+        .founder-card,
+        .waitlist-card {
             background-color: var(--bg-card);
             padding: 40px;
             border-radius: 15px;
@@ -557,27 +546,35 @@
             flex-direction: column;
         }
 
-        .founder-content .quote {
+        .card-content {
             flex: 1;
         }
 
-        .waitlist-story .waitlist-form {
-            justify-content: flex-end;
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color, rgba(0,0,0,0.08));
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .waitlist-story .form-subtitle {
+        /* Form styling */
+        .form-subtitle {
             color: var(--accent-primary);
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 30px;
         }
 
-        .waitlist-story .form-group {
+        .form-group {
             width: 100%;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .waitlist-story input {
+        .waitlist-card input {
             width: 100%;
             padding: 14px 16px;
             font-size: 1rem;
@@ -588,28 +585,26 @@
             transition: border-color 0.2s ease;
         }
 
-        .waitlist-story input:focus {
+        .waitlist-card input:focus {
             outline: none;
             border-color: var(--accent-primary);
         }
 
-        .waitlist-story input::placeholder {
+        .waitlist-card input::placeholder {
             color: var(--text-secondary);
             opacity: 0.6;
         }
 
-        .waitlist-story label {
+        .waitlist-card label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
             color: var(--text-primary);
         }
 
-        .waitlist-story .form-privacy {
-            margin-top: 15px;
+        .form-privacy {
             font-size: 0.85rem;
             color: var(--text-secondary);
-            text-align: center;
         }
 
         @media (max-width: 968px) {
@@ -618,8 +613,8 @@
                 gap: 40px;
             }
 
-            .founder-story h2,
-            .waitlist-story h2 {
+            .card-footer {
+                justify-content: center;
                 text-align: center;
             }
         }
@@ -1418,19 +1413,18 @@
     <section class="founder-section" id="waitlist">
         <div class="container">
             <div class="founder-layout">
-                <div class="founder-story">
-                    <h2>Why RideCareShare</h2>
-                    <div class="founder-content">
+                <div class="founder-card">
+                    <div class="card-content">
                         <p class="quote">"Flying home should be the best part of any journey. Instead, it ends with an expensive, awkward ride where forced pleasantries benefit no one except a distant corporation's bottom line. But it doesn't have to be this way. RideCareShare was born from the belief that technology can do better—that it can bring people together around shared purpose, turn strangers into neighbors, and transform every homecoming into something that strengthens community rather than depletes it."</p>
-                        <div class="quote-footer">
-                            <p class="quote-author">— Creator of RideCareShare</p>
-                            <button id="readStoryBtn" class="btn btn-secondary">Read The Story</button>
-                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="quote-author">— Creator of RideCareShare</p>
+                        <button id="readStoryBtn" class="btn btn-secondary">Read The Story</button>
                     </div>
                 </div>
 
-                <div class="waitlist-story">
-                    <div class="waitlist-form">
+                <div class="waitlist-card">
+                    <div class="card-content">
                         <p class="form-subtitle">Get early access and exclusive updates.</p>
                         <form id="waitlistForm">
                             <div class="form-group">
@@ -1441,9 +1435,11 @@
                                 <label for="email">Email</label>
                                 <input type="email" id="email" name="email" placeholder="your@email.com" required>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Join Waitlist</button>
                         </form>
-                        <p class="form-privacy">We respect your privacy. Unsubscribe anytime.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="form-privacy">We respect your privacy.</span>
+                        <button type="submit" form="waitlistForm" class="btn btn-primary">Join Waitlist</button>
                     </div>
                 </div>
             </div>
