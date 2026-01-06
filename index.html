@@ -585,6 +585,23 @@
             font-size: 1.1rem;
         }
 
+        .early-voices-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .early-voices-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .early-voices-cards .testimonial-card {
+            padding: 20px;
+        }
+
         @media (max-width: 968px) {
             .testimonials-showcase {
                 grid-template-columns: 1fr;
@@ -1283,6 +1300,19 @@
                             </div>
                         </li>
                     </ul>
+
+                    <h3 class="early-voices-title">Early Voices</h3>
+                    <div class="early-voices-cards">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"I met my new business partner on a RideCareShare trip."</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"The best $20 I ever donated — a great ride and a new friend."</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"It feels good to know your trip supports something real."</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1297,33 +1327,6 @@
             </div>
             <div class="cta-buttons" style="margin-top: 40px;">
                 <button id="readStoryBtn" class="btn btn-secondary">Read The Story</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="container">
-            <div class="testimonials-showcase">
-                <div class="testimonial-cards-section">
-                    <h2>Early Voices</h2>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"I met my new business partner on a RideCareShare trip."</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"The best $20 I ever donated — a great ride and a new friend."</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"It feels good to know your trip supports something real."</p>
-                    </div>
-                </div>
-
-                <div class="phone-mockup">
-                    <div class="phone-frame">
-                        <div class="phone-screen">
-                            <img src="assets/images/app-success.png" alt="RideCareShare App - Success Screen">
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
