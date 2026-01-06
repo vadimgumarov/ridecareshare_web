@@ -1,5 +1,30 @@
 # PROGRESS.md - RideCareShare Website
 
+## 2026-01-05
+- Completed: Key Features section redesign with app screenshot snippets
+- Tests: Manual browser testing (layout alignment, responsive design)
+- Performance: Added 4 feature screenshots (~500KB total), load time still <1s
+
+### Accomplishments
+- Moved Key Features to standalone section under "One Simple Solution for:"
+- Replaced emoji icons with actual app screenshot snippets:
+  - Instant Matching: flight matching screenshot
+  - Impact Tracking: donations/contributions screenshot
+  - Verified Safety: safety verification screenshot
+  - Transparent Donations: charity selection screenshot
+- Implemented flexbox layout for horizontal alignment:
+  - Text content (title + description) aligned at top
+  - Screenshot snippets aligned horizontally at bottom
+- Renamed "Charities & Impact Tracking" to "Impact Tracking"
+
+### Technical Details
+- Feature cards use `display: flex; flex-direction: column`
+- `margin-top: auto` on snippets pushes them to bottom
+- 4-column responsive grid (2 on tablet, 1 on mobile)
+- Images: feature-instant-matching.png, feature-donations.png, feature-safety.png, feature-charities.png
+
+---
+
 ## 2025-12-28
 - Completed: FOUNDATION v7.0 integration
 - CLAUDE.md migrated to v5.0 template (504 → 153 lines)
