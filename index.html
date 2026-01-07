@@ -1506,11 +1506,11 @@
     </footer>
 
     <!-- Founder Story Modal -->
-    <div id="storyModal" class="modal-overlay">
+    <div id="storyModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
             <button id="closeModal" class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-story">
-                <h2>The Story</h2>
+                <h2 id="modalTitle">The Story</h2>
 
                 <p>Imagine you've just landed at any airport after a long flight. You open your phone to book a ride home, and see $85 for a 30-minute trip—surge pricing in full effect. You get in the car, exchange maybe three words with the driver, stare at your phone, and arrive home $85 poorer and somehow feeling more isolated than when you started.</p>
 
@@ -1620,26 +1620,37 @@
             });
         });
 
-        // Modal functionality
+        // Modal functionality with accessibility
         const modal = document.getElementById('storyModal');
         const readStoryBtn = document.getElementById('readStoryBtn');
         const closeModalBtn = document.getElementById('closeModal');
 
-        if (modal && readStoryBtn && closeModalBtn) {
-            readStoryBtn.addEventListener('click', () => {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            closeModalBtn.focus(); // Move focus to modal
+        }
 
-            closeModalBtn.addEventListener('click', () => {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            readStoryBtn.focus(); // Return focus to trigger
+        }
+
+        if (modal && readStoryBtn && closeModalBtn) {
+            readStoryBtn.addEventListener('click', openModal);
+            closeModalBtn.addEventListener('click', closeModal);
 
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
+                    closeModal();
+                }
+            });
+
+            // Close on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
                 }
             });
         }
