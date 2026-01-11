@@ -55,3 +55,14 @@ vendor/
 *.tar
 *.tar.gz
 *.rar
+
+# Symlinked files (tracked in FOUNDATION)
+CLAUDE.md
+.claude/agents
+.claude/commands
+.claude/scripts
+.claude/settings.json
+.claude/task-backups
+.claude/task-logs
+.claude/tasks
+.claude/templates
