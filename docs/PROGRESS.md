@@ -1,5 +1,25 @@
 # PROGRESS.md - RideCareShare Website
 
+## 2026-01-15
+
+### Privacy Policy & Terms of Service
+- Added Privacy Policy and Terms of Service as modal overlays in footer
+- Content sourced from RIDECARESHARE_MOBILE legal documents
+- Condensed summaries with contact links for full versions
+
+**Implementation:**
+- Footer links: "Privacy Policy | Terms of Service" above copyright
+- Modal overlays matching existing "Read The Story" pattern
+- Scrollable legal content with custom scrollbar styling
+- Unified JavaScript modal handler for all three modals
+- Full accessibility: ARIA attributes, ESC key close, focus management
+- Dark/light theme support
+- Mobile responsive
+
+**Commit:** `cf15df6` - feat: add Privacy Policy and Terms of Service modal overlays
+
+---
+
 ## 2026-01-06
 - Completed: Production optimization and Lighthouse audit
 - Tests: Lighthouse audit passed (96/93/100/100)

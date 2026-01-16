@@ -4,7 +4,7 @@
 - Working on: Website pre-launch landing page - fully functional and deployed
 - Branch: main
 - Test Status: Lighthouse audit passed (96/93/100/100)
-- Last session: Production optimization - OG image, accessibility, performance
+- Last session: Added Privacy Policy and Terms of Service modal overlays
 - Current focus: Launch ready
 - **Epic #1 CLOSED** - All success criteria met
 
@@ -98,7 +98,10 @@
 - **No Critical Issues**: All features working as expected
 - **Safe to Deploy**: All changes tested and verified before pushing
 
-## Recent Commits (2026-01-06)
+## Recent Commits (2026-01-15)
+- cf15df6: feat: add Privacy Policy and Terms of Service modal overlays
+
+### Previous (2026-01-06)
 - e0e19ff: fix: correct capitalization "Your decision" → "your decision"
 - 303816f: perf: add width/height attributes and lazy loading to all images
 - ffca419: fix: change og-image tagline to black text
@@ -119,6 +122,6 @@
 
 ---
 
-**Last Updated**: 2026-01-06
+**Last Updated**: 2026-01-15
 **Status**: Launch ready (Lighthouse: 96/93/100/100)
 **Next Milestone**: Launch
