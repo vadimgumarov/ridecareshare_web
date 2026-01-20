@@ -1730,7 +1730,9 @@
                 .getElementById("surveyFormContainer")
                 .classList.add("hidden");
               document.getElementById("successMessage").classList.add("show");
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              document
+                .getElementById("successMessage")
+                .scrollIntoView({ behavior: "smooth" });
             } else {
               const data = await response.json();
               if (data.errors) {
