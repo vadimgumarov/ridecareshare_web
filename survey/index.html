@@ -482,6 +482,30 @@
         }
       }
 
+      .comment-field {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        resize: vertical;
+        min-height: 40px;
+        font-family: inherit;
+      }
+
+      .comment-field::placeholder {
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+
+      .comment-field:focus {
+        outline: none;
+        border-color: var(--accent-primary);
+      }
+
       .submit-section {
         text-align: center;
         padding-top: 20px;
@@ -594,26 +618,20 @@
     <section class="thank-you-section">
       <div class="container">
         <div class="thank-you-card">
-          <h2>A Personal Thank You</h2>
+          <h2>Thank You</h2>
           <p>
-            We handpicked you. Out of everyone we know, you're one of just 20
-            people we trust to give us the honest, unfiltered feedback we need
-            before we put this in front of the world.
+            You're one of 20 people we selected for this — chosen because we
+            trust you to be straightforward and tell us what actually needs
+            fixing.
           </p>
           <p>
-            We're asking for about an hour of your time — to download the app,
-            explore it as if you were a real user, and then tell us exactly what
-            you think. Where did it confuse you? What felt broken? What made you
-            smile? We need to know it all.
+            We're asking for about an hour: download the app, use it like you
+            would in real life, then fill out this survey. Tell us what worked,
+            what didn't, and what confused you.
           </p>
           <p>
-            Your feedback will directly shape the app we launch. This isn't
-            about polishing marketing copy — it's about building something that
-            actually works, for real people, before we go to market.
-          </p>
-          <p>
-            <strong>Your responses are anonymous.</strong> Be brutal. Be honest.
-            That's the gift we're asking for.
+            Your feedback goes directly into the next build. Anonymous
+            responses, no fluff needed — just honest observations.
           </p>
         </div>
       </div>
@@ -695,6 +713,12 @@
                     <option value="4">4 - Good</option>
                     <option value="5">5 - Excellent</option>
                   </select>
+                  <textarea
+                    name="q1_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
 
                 <div class="question-group">
@@ -710,6 +734,12 @@
                     <option value="4">4 - Good</option>
                     <option value="5">5 - Excellent</option>
                   </select>
+                  <textarea
+                    name="q2_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
 
                 <div class="question-group">
@@ -725,6 +755,12 @@
                     <option value="4">4 - Good</option>
                     <option value="5">5 - Excellent</option>
                   </select>
+                  <textarea
+                    name="q3_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
               </div>
               <div class="scale-hint">
@@ -769,6 +805,12 @@
                   <span>I got stuck / wasn't sure what to do next</span>
                 </label>
               </div>
+              <textarea
+                name="q4_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <!-- Section 2: Ease of Use -->
@@ -789,6 +831,12 @@
                     <option value="4">4 - Agree</option>
                     <option value="5">5 - Strongly agree</option>
                   </select>
+                  <textarea
+                    name="q5_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
               </div>
               <div class="scale-hint">
@@ -857,9 +905,15 @@
                 </label>
                 <label class="checkbox-option">
                   <input type="checkbox" name="q6_friction" value="other" />
-                  <span>Other (mention in final comments if selected)</span>
+                  <span>Other</span>
                 </label>
               </div>
+              <textarea
+                name="q6_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <div class="question-group">
@@ -885,6 +939,12 @@
                   <span>4+</span>
                 </label>
               </div>
+              <textarea
+                name="q7_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <!-- Section 3: Core Concept Clarity -->
@@ -909,6 +969,12 @@
                     <option value="4">4 - Agree</option>
                     <option value="5">5 - Strongly agree</option>
                   </select>
+                  <textarea
+                    name="q8_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
               </div>
               <div class="scale-hint">
@@ -963,6 +1029,12 @@
                   <span>I'm not sure what it is</span>
                 </label>
               </div>
+              <textarea
+                name="q9_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <!-- Section 4: Trust and Safety -->
@@ -983,6 +1055,12 @@
                     <option value="4">4 - Agree</option>
                     <option value="5">5 - Strongly agree</option>
                   </select>
+                  <textarea
+                    name="q10_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
               </div>
               <div class="scale-hint">
@@ -1035,6 +1113,12 @@
                   <span>Other</span>
                 </label>
               </div>
+              <textarea
+                name="q11_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <!-- Section 5: Charity + Donation -->
@@ -1059,6 +1143,12 @@
                     <option value="4">4 - Agree</option>
                     <option value="5">5 - Strongly agree</option>
                   </select>
+                  <textarea
+                    name="q12_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
 
                 <div class="question-group">
@@ -1078,6 +1168,12 @@
                     <option value="4">4 - Agree</option>
                     <option value="5">5 - Strongly agree</option>
                   </select>
+                  <textarea
+                    name="q13_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
               </div>
               <div class="scale-hint">
@@ -1130,6 +1226,12 @@
                   <span>Not sure / depends on trip length</span>
                 </label>
               </div>
+              <textarea
+                name="q14_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <!-- Section 6: Value and Adoption -->
@@ -1154,6 +1256,12 @@
                     <option value="4">4 - Likely</option>
                     <option value="5">5 - Very likely</option>
                   </select>
+                  <textarea
+                    name="q15_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
 
                 <div class="question-group">
@@ -1169,6 +1277,12 @@
                     <option value="4">4 - Likely</option>
                     <option value="5">5 - Very likely</option>
                   </select>
+                  <textarea
+                    name="q16_comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
                 </div>
               </div>
               <div class="scale-hint">
@@ -1213,6 +1327,12 @@
                   <span>Other / not sure</span>
                 </label>
               </div>
+              <textarea
+                name="q17_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <!-- Section 7: The One Thing to Fix -->
@@ -1274,6 +1394,12 @@
                   <span>Other</span>
                 </label>
               </div>
+              <textarea
+                name="q18_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <div class="question-group">
@@ -1312,6 +1438,12 @@
                   <span>Launch-ready</span>
                 </label>
               </div>
+              <textarea
+                name="q19_comment"
+                class="comment-field"
+                placeholder="Anything to add? (optional)"
+                rows="1"
+              ></textarea>
             </div>
 
             <div class="submit-section">
