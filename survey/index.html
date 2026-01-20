@@ -1,0 +1,1369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RideCareShare Focus Group Survey - Help us shape the future of donation-powered ridesharing."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>RideCareShare - Focus Group Survey</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/images/logo-icon.svg"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-blue: #3b9af8;
+        --primary-blue-hover: #5db0fa;
+        --bg-primary: #f5f7f9;
+        --bg-secondary: #ebeef2;
+        --bg-card: #ffffff;
+        --text-primary: #2a2a2a;
+        --text-secondary: #6b7280;
+        --accent-primary: #3b9af8;
+        --accent-secondary: #5db0fa;
+        --accent-tertiary: #d1d5db;
+        --border-color: #e5e7eb;
+        --shadow: rgba(0, 0, 0, 0.08);
+        --link-color: #3b9af8;
+      }
+
+      [data-theme="dark"] {
+        --bg-primary: #1f2937;
+        --bg-secondary: #2d3748;
+        --bg-card: #374151;
+        --text-primary: #f3f4f6;
+        --text-secondary: #d1d5db;
+        --accent-primary: #5db0fa;
+        --accent-secondary: #7dc4fc;
+        --accent-tertiary: #6b7280;
+        --border-color: #4b5563;
+        --shadow: rgba(0, 0, 0, 0.3);
+        --link-color: #7dc4fc;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-primary);
+        background-color: var(--bg-primary);
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: var(--bg-card);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px var(--shadow);
+        transition: background-color 0.3s ease;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        height: 50px;
+        display: block;
+      }
+
+      .logo img {
+        height: 100%;
+        width: auto;
+        display: block;
+      }
+
+      .theme-toggle {
+        background: var(--accent-primary);
+        border: none;
+        color: var(--bg-card);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px var(--shadow);
+      }
+
+      .theme-toggle:hover {
+        transform: scale(1.1);
+        background: var(--accent-secondary);
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .hero {
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          var(--bg-secondary) 0%,
+          var(--bg-primary) 100%
+        );
+        padding: 60px 0;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: var(--text-primary);
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--accent-primary);
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--text-primary);
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 30px;
+        line-height: 1.7;
+      }
+
+      .highlight {
+        background: linear-gradient(
+          120deg,
+          var(--accent-tertiary) 0%,
+          var(--accent-tertiary) 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 100% 40%;
+        background-position: 0 80%;
+        padding: 0 4px;
+      }
+
+      .btn {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 4px 15px var(--shadow);
+      }
+
+      .btn-primary {
+        background-color: var(--accent-primary);
+        color: var(--bg-card);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px var(--shadow);
+      }
+
+      .btn-secondary {
+        background-color: var(--bg-card);
+        color: var(--accent-primary);
+        border: 2px solid var(--accent-primary);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--accent-primary);
+        color: var(--bg-card);
+        transform: translateY(-2px);
+      }
+
+      /* Thank You Section */
+      .thank-you-section {
+        background-color: var(--bg-secondary);
+        text-align: center;
+      }
+
+      .thank-you-card {
+        background-color: var(--bg-card);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px var(--shadow);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .thank-you-card p {
+        color: var(--text-secondary);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+
+      /* App Download Section */
+      .app-download-section {
+        background-color: var(--bg-primary);
+      }
+
+      .download-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .download-card {
+        background-color: var(--bg-card);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px var(--shadow);
+        text-align: center;
+      }
+
+      .download-card h3 {
+        color: var(--accent-primary);
+        margin-bottom: 15px;
+      }
+
+      .download-card p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .download-card .btn {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .instructions {
+        background-color: var(--bg-secondary);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      .instructions h4 {
+        color: var(--text-primary);
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      .instructions ol {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .instructions li {
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .download-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Survey Section */
+      .survey-section {
+        background-color: var(--bg-secondary);
+      }
+
+      .survey-form {
+        background-color: var(--bg-card);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px var(--shadow);
+      }
+
+      .survey-intro {
+        background-color: var(--bg-secondary);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      .survey-intro h3 {
+        color: var(--accent-primary);
+        margin-bottom: 15px;
+      }
+
+      .survey-intro p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .survey-intro ul {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+
+      .survey-intro li {
+        margin-bottom: 3px;
+      }
+
+      .question-group {
+        margin-bottom: 35px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .question-group:last-of-type {
+        border-bottom: none;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      }
+
+      .section-title {
+        background: linear-gradient(
+          135deg,
+          var(--accent-primary) 0%,
+          var(--accent-secondary) 100%
+        );
+        color: var(--bg-card);
+        padding: 12px 20px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+      }
+
+      .question-label {
+        display: block;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .question-label .q-number {
+        color: var(--accent-primary);
+        font-weight: bold;
+      }
+
+      .scale-select {
+        width: 100%;
+        max-width: 400px;
+        padding: 12px 16px;
+        font-size: 1rem;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        cursor: pointer;
+        transition: border-color 0.2s ease;
+      }
+
+      .scale-select:focus {
+        outline: none;
+        border-color: var(--accent-primary);
+      }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .radio-option,
+      .checkbox-option {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 15px;
+        background-color: var(--bg-primary);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .radio-option:hover,
+      .checkbox-option:hover {
+        background-color: var(--bg-secondary);
+      }
+
+      .radio-option input,
+      .checkbox-option input {
+        margin-top: 3px;
+        cursor: pointer;
+        accent-color: var(--accent-primary);
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      .radio-option span,
+      .checkbox-option span {
+        color: var(--text-primary);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .checkbox-note {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+
+      .submit-section {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-color);
+        margin-top: 20px;
+      }
+
+      .submit-section p {
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+      }
+
+      .submit-btn {
+        padding: 18px 60px;
+        font-size: 1.2rem;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--bg-secondary);
+        padding: 30px 0;
+        text-align: center;
+        color: var(--text-secondary);
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+
+      /* Success Message */
+      .success-message {
+        display: none;
+        text-align: center;
+        padding: 60px 40px;
+      }
+
+      .success-message.show {
+        display: block;
+      }
+
+      .success-message h2 {
+        color: var(--accent-primary);
+        margin-bottom: 20px;
+      }
+
+      .success-message p {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .survey-form.hidden {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .survey-form {
+          padding: 25px 20px;
+        }
+
+        .section-title {
+          font-size: 1rem;
+          padding: 10px 15px;
+        }
+
+        .scale-select {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <img
+            src="../assets/images/logo.png"
+            alt="RideCareShare"
+            id="logoImg"
+            width="1259"
+            height="347"
+          />
+        </div>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+        >
+          <span id="themeIcon">&#9790;</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Focus Group Survey</h1>
+        <p class="subtitle">
+          Thank you for being one of our
+          <span class="highlight">20 selected participants</span>. Your feedback
+          will directly shape the future of RideCareShare.
+        </p>
+      </div>
+    </section>
+
+    <section class="thank-you-section">
+      <div class="container">
+        <div class="thank-you-card">
+          <h2>A Personal Thank You</h2>
+          <p>
+            You're among a small group of people we've personally selected to
+            test the RideCareShare app before launch. Your honest feedback is
+            invaluable.
+          </p>
+          <p>
+            Please download and explore the app first, then complete this
+            survey. The whole process takes about 4 minutes.
+          </p>
+          <p>
+            <strong>Your responses are anonymous</strong> and will help us
+            create the best possible experience for our community.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-download-section">
+      <div class="container">
+        <h2>Step 1: Download the App</h2>
+        <div class="download-grid">
+          <div class="download-card">
+            <h3>Android</h3>
+            <p>Download the APK directly to your Android device.</p>
+            <a href="ridecareshare.apk" class="btn btn-primary" download
+              >Download APK</a
+            >
+            <div class="instructions">
+              <h4>Installation Steps:</h4>
+              <ol>
+                <li>Tap "Download APK" above</li>
+                <li>Open the downloaded file</li>
+                <li>
+                  If prompted, go to Settings and enable "Install unknown apps"
+                </li>
+                <li>Tap "Install" and wait for completion</li>
+                <li>Open RideCareShare and explore!</li>
+              </ol>
+            </div>
+          </div>
+          <div class="download-card">
+            <h3>iPhone (iOS)</h3>
+            <p>Join our TestFlight beta to install on iPhone.</p>
+            <a
+              href="#"
+              class="btn btn-secondary"
+              id="iosBtn"
+              onclick="
+                alert(
+                  'TestFlight link coming soon. Please check back or contact us.',
+                );
+                return false;
+              "
+              >Join TestFlight</a
+            >
+            <div class="instructions">
+              <h4>Installation Steps:</h4>
+              <ol>
+                <li>Tap "Join TestFlight" above</li>
+                <li>Install TestFlight app if you don't have it</li>
+                <li>Accept the beta invitation</li>
+                <li>Install RideCareShare from TestFlight</li>
+                <li>Open the app and explore!</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="survey-section">
+      <div class="container">
+        <h2>Step 2: Complete the Survey</h2>
+
+        <div class="survey-form" id="surveyFormContainer">
+          <div class="survey-intro">
+            <h3>Rating Scales Reference</h3>
+            <p><strong>Quality Scale (1-5):</strong></p>
+            <ul>
+              <li>
+                1 = Very poor (frustrating / confusing / looks unfinished)
+              </li>
+              <li>2 = Poor (several issues, feels clunky)</li>
+              <li>3 = OK (works, but nothing special / some friction)</li>
+              <li>4 = Good (clear, smooth, enjoyable)</li>
+              <li>5 = Excellent (delightful, polished, would happily use)</li>
+            </ul>
+            <p style="margin-top: 15px">
+              <strong>Agreement Scale (1-5):</strong>
+            </p>
+            <ul>
+              <li>1 = Strongly disagree</li>
+              <li>2 = Disagree</li>
+              <li>3 = Neutral / unsure</li>
+              <li>4 = Agree</li>
+              <li>5 = Strongly agree</li>
+            </ul>
+            <p style="margin-top: 15px">
+              <strong>Likelihood Scale (1-5):</strong>
+            </p>
+            <ul>
+              <li>1 = Very unlikely</li>
+              <li>2 = Unlikely</li>
+              <li>3 = Maybe</li>
+              <li>4 = Likely</li>
+              <li>5 = Very likely</li>
+            </ul>
+          </div>
+
+          <form id="surveyForm">
+            <!-- Section 1: App Look, Flow, and Feel -->
+            <div class="section-title">1. App Look, Flow, and Feel</div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q1.</span> Overall look (UI design) —
+                Quality scale
+              </label>
+              <select name="q1_ui_design" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Very poor</option>
+                <option value="2">2 - Poor</option>
+                <option value="3">3 - OK</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q2.</span> Overall flow (screens make
+                sense, steps are in the right order) — Quality scale
+              </label>
+              <select name="q2_flow" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Very poor</option>
+                <option value="2">2 - Poor</option>
+                <option value="3">3 - OK</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q3.</span> Overall "feel" (confidence,
+                clarity, vibe, consistency) — Quality scale
+              </label>
+              <select name="q3_feel" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Very poor</option>
+                <option value="2">2 - Poor</option>
+                <option value="3">3 - OK</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q4.</span> What best describes the
+                experience?
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q4_experience"
+                    value="intuitive"
+                    required
+                  />
+                  <span>Felt intuitive from the start</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q4_experience"
+                    value="learning_curve"
+                  />
+                  <span>Needed a bit of learning but became clear</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q4_experience" value="confusing" />
+                  <span>Confusing in multiple places</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q4_experience" value="stuck" />
+                  <span>I got stuck / wasn't sure what to do next</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Section 2: Ease of Use -->
+            <div class="section-title">2. Ease of Use</div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q5.</span> I was able to do what the app
+                intended without extra effort — Agreement scale
+              </label>
+              <select name="q5_ease" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Strongly disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - Neutral / unsure</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly agree</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q6.</span> Where (if anywhere) did you
+                feel friction? (select all that apply)
+              </label>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="q6_friction"
+                    value="onboarding"
+                  />
+                  <span>Creating account / onboarding</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="q6_friction"
+                    value="creating_ride"
+                  />
+                  <span>Creating a ride / offering a ride</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="q6_friction"
+                    value="finding_ride"
+                  />
+                  <span>Finding a ride</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q6_friction" value="matching" />
+                  <span>Matching / selecting a ride</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q6_friction" value="chat" />
+                  <span>Chat / coordination</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q6_friction" value="donation" />
+                  <span>Donation / charity selection</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="q6_friction"
+                    value="next_steps"
+                  />
+                  <span>Understanding what happens next</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q6_friction" value="nothing" />
+                  <span>Nothing felt difficult</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q6_friction" value="other" />
+                  <span>Other (mention in final comments if selected)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q7.</span> How many times did you feel
+                "stuck" or unsure what to do next?
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="q7_stuck" value="0" required />
+                  <span>0</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q7_stuck" value="1" />
+                  <span>1</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q7_stuck" value="2-3" />
+                  <span>2-3</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q7_stuck" value="4+" />
+                  <span>4+</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Section 3: Core Concept Clarity -->
+            <div class="section-title">3. Core Concept Clarity</div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q8.</span> The app's purpose was clear
+                within the first minute — Agreement scale
+              </label>
+              <select name="q8_purpose_clarity" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Strongly disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - Neutral / unsure</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly agree</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q9.</span> Which statement best matches
+                your understanding?
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q9_understanding"
+                    value="carpooling_donations"
+                    required
+                  />
+                  <span
+                    >It's carpooling + donations to charity (social good
+                    twist)</span
+                  >
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q9_understanding"
+                    value="rideshare_alternative"
+                  />
+                  <span>It's mainly a rideshare alternative</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q9_understanding"
+                    value="charity_app"
+                  />
+                  <span
+                    >It's mainly a charity/donation app with rides as a
+                    feature</span
+                  >
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q9_understanding" value="unsure" />
+                  <span>I'm not sure what it is</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Section 4: Trust and Safety -->
+            <div class="section-title">4. Trust and Safety Perception</div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q10.</span> I would feel safe using this
+                with real people — Agreement scale
+              </label>
+              <select name="q10_safety" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Strongly disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - Neutral / unsure</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly agree</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q11.</span> What would increase your
+                trust most?
+              </label>
+              <p class="checkbox-note">Pick up to 2</p>
+              <div class="checkbox-group" id="q11_group">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q11_trust" value="verified_id" />
+                  <span>Verified profiles / ID verification</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q11_trust" value="ratings" />
+                  <span>Ratings / reviews</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q11_trust" value="mutual" />
+                  <span>Mutual connections (friends-of-friends)</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q11_trust" value="moderation" />
+                  <span>Clear rules + reporting / moderation</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q11_trust" value="phone_mask" />
+                  <span>In-app chat masking phone number</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="q11_trust"
+                    value="trip_sharing"
+                  />
+                  <span>Trip sharing / basic safety features</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="q11_trust" value="other" />
+                  <span>Other</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Section 5: Charity + Donation -->
+            <div class="section-title">5. Charity + Donation Mechanics</div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q12.</span> The charity aspect feels
+                meaningful (not gimmicky) — Agreement scale
+              </label>
+              <select
+                name="q12_charity_meaningful"
+                class="scale-select"
+                required
+              >
+                <option value="">Select rating...</option>
+                <option value="1">1 - Strongly disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - Neutral / unsure</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly agree</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q13.</span> The donation step felt clear
+                and fair — Agreement scale
+              </label>
+              <select name="q13_donation_clear" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Strongly disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - Neutral / unsure</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly agree</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q14.</span> Minimum suggested donation of
+                ~$8 feels:
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q14_donation_amount"
+                    value="too_low"
+                    required
+                  />
+                  <span>Too low</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q14_donation_amount"
+                    value="about_right"
+                  />
+                  <span>About right</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q14_donation_amount"
+                    value="too_high"
+                  />
+                  <span>Too high</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q14_donation_amount"
+                    value="depends"
+                  />
+                  <span>Not sure / depends on trip length</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Section 6: Value and Adoption -->
+            <div class="section-title">6. Value and Adoption</div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q15.</span> How likely are you to use
+                this in real life in the next month? — Likelihood scale
+              </label>
+              <select name="q15_use_likelihood" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Very unlikely</option>
+                <option value="2">2 - Unlikely</option>
+                <option value="3">3 - Maybe</option>
+                <option value="4">4 - Likely</option>
+                <option value="5">5 - Very likely</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q16.</span> How likely are you to
+                recommend it to a friend? — Likelihood scale
+              </label>
+              <select name="q16_recommend" class="scale-select" required>
+                <option value="">Select rating...</option>
+                <option value="1">1 - Very unlikely</option>
+                <option value="2">2 - Unlikely</option>
+                <option value="3">3 - Maybe</option>
+                <option value="4">4 - Likely</option>
+                <option value="5">5 - Very likely</option>
+              </select>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q17.</span> What is the main reason you
+                would use it?
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q17_reason"
+                    value="help_others"
+                    required
+                  />
+                  <span>To help people / do a good deed</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q17_reason" value="community" />
+                  <span>To meet people / community vibe</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q17_reason" value="environment" />
+                  <span>To reduce car trips / environmental reasons</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q17_reason" value="convenience" />
+                  <span>For convenience (rides)</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q17_reason" value="other" />
+                  <span>Other / not sure</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Section 7: The One Thing to Fix -->
+            <div class="section-title">7. The One Thing to Fix First</div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q18.</span> If we could improve only ONE
+                thing first, what should it be?
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q18_improve"
+                    value="simpler_steps"
+                    required
+                  />
+                  <span>Make steps simpler / fewer screens</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q18_improve" value="clearer_copy" />
+                  <span>Clearer copy / instructions</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q18_improve" value="matching" />
+                  <span>Improve matching / search experience</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q18_improve" value="trust_safety" />
+                  <span>Trust & safety features</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q18_improve"
+                    value="donation_flow"
+                  />
+                  <span>Donation flow and clarity</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q18_improve"
+                    value="visual_design"
+                  />
+                  <span>Visual design / polish</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q18_improve"
+                    value="notifications"
+                  />
+                  <span>Notifications / communication</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q18_improve" value="other" />
+                  <span>Other</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q19.</span> Overall: how "ready" does
+                this feel today?
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q19_readiness"
+                    value="not_ready"
+                    required
+                  />
+                  <span>Not ready (prototype-level)</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="q19_readiness" value="early_beta" />
+                  <span>Early beta</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q19_readiness"
+                    value="nearly_ready"
+                  />
+                  <span>Nearly ready</span>
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="q19_readiness"
+                    value="launch_ready"
+                  />
+                  <span>Launch-ready</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="submit-section">
+              <p>
+                Thank you for taking the time to provide your feedback. Your
+                input helps us build something meaningful.
+              </p>
+              <button type="submit" class="btn btn-primary submit-btn">
+                Submit Survey
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="success-message" id="successMessage">
+          <h2>Thank You!</h2>
+          <p>
+            Your feedback has been submitted successfully. We truly appreciate
+            your time and insights.
+          </p>
+          <p style="margin-top: 20px">
+            Your input will directly influence how we improve RideCareShare
+            before launch.
+          </p>
+          <p style="margin-top: 30px; color: var(--accent-primary)">
+            <strong>— The RideCareShare Team</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 RideCareShare. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Theme Toggle
+      const themeToggle = document.getElementById("themeToggle");
+      const html = document.documentElement;
+      const themeIcon = document.getElementById("themeIcon");
+      const logoImg = document.getElementById("logoImg");
+
+      const savedTheme = localStorage.getItem("theme") || "dark";
+      html.setAttribute("data-theme", savedTheme);
+      updateThemeIcon(savedTheme);
+
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        updateThemeIcon(newTheme);
+      });
+
+      function updateThemeIcon(theme) {
+        if (theme === "dark") {
+          themeIcon.innerHTML = "&#9788;";
+          logoImg.src = "../assets/images/logo-dark.png";
+        } else {
+          themeIcon.innerHTML = "&#9790;";
+          logoImg.src = "../assets/images/logo.png";
+        }
+      }
+
+      // Limit Q11 to max 2 selections
+      const q11Checkboxes = document.querySelectorAll(
+        '#q11_group input[type="checkbox"]',
+      );
+      q11Checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+          const checked = document.querySelectorAll(
+            '#q11_group input[type="checkbox"]:checked',
+          );
+          if (checked.length > 2) {
+            checkbox.checked = false;
+            alert("Please select up to 2 options only.");
+          }
+        });
+      });
+
+      // Form Submission
+      document
+        .getElementById("surveyForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(e.target);
+
+          // Collect checkbox values as arrays
+          const frictionValues = [];
+          document
+            .querySelectorAll('input[name="q6_friction"]:checked')
+            .forEach((cb) => {
+              frictionValues.push(cb.value);
+            });
+          formData.set(
+            "q6_friction",
+            frictionValues.join(", ") || "None selected",
+          );
+
+          const trustValues = [];
+          document
+            .querySelectorAll('input[name="q11_trust"]:checked')
+            .forEach((cb) => {
+              trustValues.push(cb.value);
+            });
+          formData.set("q11_trust", trustValues.join(", ") || "None selected");
+
+          try {
+            // IMPORTANT: Replace this URL with your FormSpree form endpoint
+            // Create a new form at https://formspree.io for survey responses
+            const response = await fetch(
+              "https://formspree.io/f/YOUR_FORM_ID",
+              {
+                method: "POST",
+                body: formData,
+                headers: {
+                  Accept: "application/json",
+                },
+              },
+            );
+
+            if (response.ok) {
+              document
+                .getElementById("surveyFormContainer")
+                .classList.add("hidden");
+              document.getElementById("successMessage").classList.add("show");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+              const data = await response.json();
+              if (data.errors) {
+                alert(
+                  "Error submitting survey:\n" +
+                    data.errors.map((error) => error.message).join(", "),
+                );
+              } else {
+                alert(
+                  "There was a problem submitting the survey. Please try again.",
+                );
+              }
+            }
+          } catch (error) {
+            alert(
+              "There was a problem submitting the survey. Please check your connection and try again.",
+            );
+            console.error("Survey submission error:", error);
+          }
+        });
+    </script>
+  </body>
+</html>
