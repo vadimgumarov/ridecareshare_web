@@ -440,6 +440,48 @@
         margin-bottom: 10px;
       }
 
+      .question-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 12px;
+      }
+
+      .question-header .question-label {
+        margin-bottom: 0;
+        flex: 1;
+      }
+
+      .scale-hint {
+        background-color: var(--bg-secondary);
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        line-height: 1.4;
+        flex-shrink: 0;
+        max-width: 220px;
+      }
+
+      .scale-hint strong {
+        color: var(--accent-primary);
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .question-header {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .scale-hint {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+
       .submit-section {
         text-align: center;
         padding-top: 20px;
@@ -628,49 +670,20 @@
         <h2>Step 2: Complete the Survey</h2>
 
         <div class="survey-form" id="surveyFormContainer">
-          <div class="survey-intro">
-            <h3>Rating Scales Reference</h3>
-            <p><strong>Quality Scale (1-5):</strong></p>
-            <ul>
-              <li>
-                1 = Very poor (frustrating / confusing / looks unfinished)
-              </li>
-              <li>2 = Poor (several issues, feels clunky)</li>
-              <li>3 = OK (works, but nothing special / some friction)</li>
-              <li>4 = Good (clear, smooth, enjoyable)</li>
-              <li>5 = Excellent (delightful, polished, would happily use)</li>
-            </ul>
-            <p style="margin-top: 15px">
-              <strong>Agreement Scale (1-5):</strong>
-            </p>
-            <ul>
-              <li>1 = Strongly disagree</li>
-              <li>2 = Disagree</li>
-              <li>3 = Neutral / unsure</li>
-              <li>4 = Agree</li>
-              <li>5 = Strongly agree</li>
-            </ul>
-            <p style="margin-top: 15px">
-              <strong>Likelihood Scale (1-5):</strong>
-            </p>
-            <ul>
-              <li>1 = Very unlikely</li>
-              <li>2 = Unlikely</li>
-              <li>3 = Maybe</li>
-              <li>4 = Likely</li>
-              <li>5 = Very likely</li>
-            </ul>
-          </div>
-
           <form id="surveyForm">
             <!-- Section 1: App Look, Flow, and Feel -->
             <div class="section-title">1. App Look, Flow, and Feel</div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q1.</span> Overall look (UI design) —
-                Quality scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q1.</span> Overall look (UI design)
+                </label>
+                <div class="scale-hint">
+                  <strong>Quality Scale</strong>
+                  1=Very poor, 2=Poor, 3=OK, 4=Good, 5=Excellent
+                </div>
+              </div>
               <select name="q1_ui_design" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Very poor</option>
@@ -682,10 +695,16 @@
             </div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q2.</span> Overall flow (screens make
-                sense, steps are in the right order) — Quality scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q2.</span> Overall flow (screens make
+                  sense, steps are in the right order)
+                </label>
+                <div class="scale-hint">
+                  <strong>Quality Scale</strong>
+                  1=Very poor, 2=Poor, 3=OK, 4=Good, 5=Excellent
+                </div>
+              </div>
               <select name="q2_flow" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Very poor</option>
@@ -697,10 +716,16 @@
             </div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q3.</span> Overall "feel" (confidence,
-                clarity, vibe, consistency) — Quality scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q3.</span> Overall "feel" (confidence,
+                  clarity, vibe, consistency)
+                </label>
+                <div class="scale-hint">
+                  <strong>Quality Scale</strong>
+                  1=Very poor, 2=Poor, 3=OK, 4=Good, 5=Excellent
+                </div>
+              </div>
               <select name="q3_feel" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Very poor</option>
@@ -749,10 +774,17 @@
             <div class="section-title">2. Ease of Use</div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q5.</span> I was able to do what the app
-                intended without extra effort — Agreement scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q5.</span> I was able to do what the
+                  app intended without extra effort
+                </label>
+                <div class="scale-hint">
+                  <strong>Agreement Scale</strong>
+                  1=Strongly disagree, 2=Disagree, 3=Neutral, 4=Agree,
+                  5=Strongly agree
+                </div>
+              </div>
               <select name="q5_ease" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Strongly disagree</option>
@@ -853,10 +885,17 @@
             <div class="section-title">3. Core Concept Clarity</div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q8.</span> The app's purpose was clear
-                within the first minute — Agreement scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q8.</span> The app's purpose was clear
+                  within the first minute
+                </label>
+                <div class="scale-hint">
+                  <strong>Agreement Scale</strong>
+                  1=Strongly disagree, 2=Disagree, 3=Neutral, 4=Agree,
+                  5=Strongly agree
+                </div>
+              </div>
               <select name="q8_purpose_clarity" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Strongly disagree</option>
@@ -915,10 +954,17 @@
             <div class="section-title">4. Trust and Safety Perception</div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q10.</span> I would feel safe using this
-                with real people — Agreement scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q10.</span> I would feel safe using
+                  this with real people
+                </label>
+                <div class="scale-hint">
+                  <strong>Agreement Scale</strong>
+                  1=Strongly disagree, 2=Disagree, 3=Neutral, 4=Agree,
+                  5=Strongly agree
+                </div>
+              </div>
               <select name="q10_safety" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Strongly disagree</option>
@@ -975,10 +1021,17 @@
             <div class="section-title">5. Charity + Donation Mechanics</div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q12.</span> The charity aspect feels
-                meaningful (not gimmicky) — Agreement scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q12.</span> The charity aspect feels
+                  meaningful (not gimmicky)
+                </label>
+                <div class="scale-hint">
+                  <strong>Agreement Scale</strong>
+                  1=Strongly disagree, 2=Disagree, 3=Neutral, 4=Agree,
+                  5=Strongly agree
+                </div>
+              </div>
               <select
                 name="q12_charity_meaningful"
                 class="scale-select"
@@ -994,10 +1047,17 @@
             </div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q13.</span> The donation step felt clear
-                and fair — Agreement scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q13.</span> The donation step felt
+                  clear and fair
+                </label>
+                <div class="scale-hint">
+                  <strong>Agreement Scale</strong>
+                  1=Strongly disagree, 2=Disagree, 3=Neutral, 4=Agree,
+                  5=Strongly agree
+                </div>
+              </div>
               <select name="q13_donation_clear" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Strongly disagree</option>
@@ -1054,10 +1114,16 @@
             <div class="section-title">6. Value and Adoption</div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q15.</span> How likely are you to use
-                this in real life in the next month? — Likelihood scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q15.</span> How likely are you to use
+                  this in real life in the next month?
+                </label>
+                <div class="scale-hint">
+                  <strong>Likelihood Scale</strong>
+                  1=Very unlikely, 2=Unlikely, 3=Maybe, 4=Likely, 5=Very likely
+                </div>
+              </div>
               <select name="q15_use_likelihood" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Very unlikely</option>
@@ -1069,10 +1135,16 @@
             </div>
 
             <div class="question-group">
-              <label class="question-label">
-                <span class="q-number">Q16.</span> How likely are you to
-                recommend it to a friend? — Likelihood scale
-              </label>
+              <div class="question-header">
+                <label class="question-label">
+                  <span class="q-number">Q16.</span> How likely are you to
+                  recommend it to a friend?
+                </label>
+                <div class="scale-hint">
+                  <strong>Likelihood Scale</strong>
+                  1=Very unlikely, 2=Unlikely, 3=Maybe, 4=Likely, 5=Very likely
+                </div>
+              </div>
               <select name="q16_recommend" class="scale-select" required>
                 <option value="">Select rating...</option>
                 <option value="1">1 - Very unlikely</option>
