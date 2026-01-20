@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="RideCareShare Focus Group Survey - Help us shape the future of donation-powered ridesharing."
+      content="RideCareShare Honest Survey Group - Help us shape the future of donation-powered ridesharing."
     />
     <meta name="robots" content="noindex, nofollow" />
-    <title>RideCareShare - Focus Group Survey</title>
+    <title>RideCareShare - Honest Survey Group</title>
     <link
       rel="icon"
       type="image/svg+xml"
@@ -606,7 +606,7 @@
 
     <section class="hero">
       <div class="container">
-        <h1>Focus Group Survey</h1>
+        <h1>Honest Survey Group</h1>
         <p class="subtitle">
           Thank you for being one of our
           <span class="highlight">20 selected participants</span>. Your feedback
@@ -1555,18 +1555,13 @@
           formData.set("q11_trust", trustValues.join(", ") || "None selected");
 
           try {
-            // IMPORTANT: Replace this URL with your FormSpree form endpoint
-            // Create a new form at https://formspree.io for survey responses
-            const response = await fetch(
-              "https://formspree.io/f/YOUR_FORM_ID",
-              {
-                method: "POST",
-                body: formData,
-                headers: {
-                  Accept: "application/json",
-                },
+            const response = await fetch("https://formspree.io/f/xjkjknbp", {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
               },
-            );
+            });
 
             if (response.ok) {
               document
