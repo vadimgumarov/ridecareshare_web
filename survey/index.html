@@ -705,6 +705,51 @@
 
         <div class="survey-form" id="surveyFormContainer">
           <form id="surveyForm">
+            <!-- Section 0: About You -->
+            <div class="section-title">About You</div>
+
+            <div class="question-group">
+              <label class="question-label">
+                Do you work at any of the following?
+              </label>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="Employer Type" value="Airport" />
+                  <span>Airport</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="Employer Type" value="Airline" />
+                  <span>Airline</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="Employer Type"
+                    value="Hospital / Healthcare"
+                  />
+                  <span>Hospital / Healthcare</span>
+                </label>
+                <label class="checkbox-option">
+                  <input
+                    type="checkbox"
+                    name="Employer Type"
+                    value="University / College"
+                  />
+                  <span>University / College</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="Employer Type" value="Other" />
+                  <span>Other</span>
+                </label>
+              </div>
+              <textarea
+                name="Employer Details"
+                class="comment-field"
+                placeholder="If Other, please specify (optional)"
+                rows="1"
+              ></textarea>
+            </div>
+
             <!-- Section 1: App Look, Flow, and Feel -->
             <div class="section-title">1. App Look, Flow, and Feel</div>
 
@@ -1091,9 +1136,9 @@
                   <input
                     type="radio"
                     name="Q9. Which statement best matches your understanding?"
-                    value="Mainly a rideshare alternative"
+                    value="Mainly a paid ride service alternative"
                   />
-                  <span>It's mainly a rideshare alternative</span>
+                  <span>It's mainly a paid ride service alternative</span>
                 </label>
                 <label class="radio-option">
                   <input

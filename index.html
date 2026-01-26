@@ -9,7 +9,7 @@
     />
     <meta
       name="keywords"
-      content="rideshare, carpool, airport rides, donation, charity, community, sustainable travel"
+      content="shared rides, carpool, airport rides, donation, charity, community, sustainable travel"
     />
     <meta name="author" content="Vadim" />
     <meta name="contact" content="hello@ridecareshare.com" />
@@ -669,6 +669,65 @@
         .impact-showcase {
           grid-template-columns: 1fr;
           gap: 40px;
+        }
+      }
+
+      /* Partner Section (B2B) */
+      .partner-section {
+        background-color: var(--bg-secondary);
+        padding: 80px 0;
+      }
+
+      .partner-section h2 {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+      }
+
+      .partner-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .partner-card {
+        background-color: var(--bg-card);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px var(--shadow);
+      }
+
+      .partner-card h3 {
+        color: var(--accent-primary);
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+      }
+
+      .partner-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+      }
+
+      .partner-card li {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-secondary);
+      }
+
+      .partner-card li:last-child {
+        border-bottom: none;
+      }
+
+      @media (max-width: 768px) {
+        .partner-grid {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -1625,7 +1684,7 @@
               </div>
               <div class="testimonial-card">
                 <p class="testimonial-text">
-                  "Finally, a rideshare that actually makes a difference."
+                  "Finally, a ride service that actually makes a difference."
                 </p>
               </div>
             </div>
@@ -1706,6 +1765,47 @@
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- B2B Partner Section -->
+    <section class="partner-section" id="partners">
+      <div class="container">
+        <h2>For Airports & Employers</h2>
+        <p class="section-subtitle">
+          RideCareShare is designed for institutional partnership—not mass
+          consumer adoption.
+        </p>
+        <div class="partner-grid">
+          <div class="partner-card">
+            <h3>Airports</h3>
+            <ul>
+              <li>Reduce curbside congestion</li>
+              <li>Offer passengers a verified, community-driven option</li>
+              <li>Support sustainability goals with shared rides</li>
+              <li>Pilot programs with controlled corridors</li>
+            </ul>
+            <a
+              href="mailto:partners@ridecareshare.com?subject=Airport Partnership Inquiry"
+              class="btn btn-outline"
+              >Contact for Pilots</a
+            >
+          </div>
+          <div class="partner-card">
+            <h3>Employers & Institutions</h3>
+            <ul>
+              <li>Employee commute benefits without gig-labor complexity</li>
+              <li>Hospital systems, universities, corporate campuses</li>
+              <li>Sponsor donations on behalf of your team</li>
+              <li>Verified drivers from your own workforce</li>
+            </ul>
+            <a
+              href="mailto:partners@ridecareshare.com?subject=Employer Partnership Inquiry"
+              class="btn btn-outline"
+              >Start a Conversation</a
+            >
           </div>
         </div>
       </div>
