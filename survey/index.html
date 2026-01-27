@@ -812,69 +812,121 @@
         <!-- Expandable Test Details Section -->
         <div class="test-details-content" id="testDetailsContent">
           <div class="test-details-card">
-            <h3>About the App</h3>
+            <h3>What is RideCareShare?</h3>
             <p>
-              RideCareShare is a community-driven ride sharing platform where
-              every ride supports a charitable cause. No fares—just donations to
-              verified charities.
+              RideCareShare is a
+              <strong>charitable ridesharing app</strong> designed for airport
+              travelers. Unlike traditional rideshare services, RideCareShare
+              connects drivers and passengers heading to or from the same
+              airport, with a portion of each ride's cost donated to charity.
             </p>
-
-            <h3>What to Test</h3>
             <ul>
-              <li>Create an account and explore the interface</li>
-              <li>Try creating a ride offer or request</li>
-              <li>Browse available rides and charities</li>
-              <li>Test the matching and messaging features</li>
-              <li>Check how donations work</li>
+              <li>Drivers post upcoming trips to/from airports</li>
+              <li>
+                Passengers browse and join rides that match their schedule
+              </li>
+              <li>Both parties benefit from shared travel costs</li>
+              <li>A portion goes to charities selected by drivers</li>
+            </ul>
+
+            <h3>Key Features</h3>
+            <ul>
+              <li>
+                <strong>Ride Matching</strong> - Find rides by airport, date,
+                and direction
+              </li>
+              <li>
+                <strong>Charitable Giving</strong> - Drivers select charities to
+                support
+              </li>
+              <li>
+                <strong>Real-time Updates</strong> - Live notifications for ride
+                requests
+              </li>
+              <li>
+                <strong>Verified Users</strong> - Phone, email, and identity
+                verification
+              </li>
+              <li>
+                <strong>In-App Messaging</strong> - Contact drivers/passengers
+                via email or SMS
+              </li>
+              <li>
+                <strong>Rating System</strong> - Rate your experience after
+                rides
+              </li>
+            </ul>
+
+            <h3>Testing Scenarios</h3>
+            <p><strong>As a Passenger:</strong></p>
+            <ul>
+              <li>Browse rides for different airports</li>
+              <li>Filter by "TO" vs "FROM" airport</li>
+              <li>Request to join a ride</li>
+              <li>View driver's profile and vehicle</li>
+              <li>Leave a ride you've joined</li>
+            </ul>
+            <p><strong>As a Driver:</strong></p>
+            <ul>
+              <li>Complete all verifications</li>
+              <li>Add a vehicle</li>
+              <li>Select charities to support</li>
+              <li>Create a ride with all details</li>
+              <li>Accept/decline passenger requests</li>
             </ul>
 
             <h3>Test Accounts</h3>
-            <p>Use these accounts to test different scenarios:</p>
+            <p>Use these accounts to explore existing data:</p>
             <div class="test-accounts-table">
               <table>
                 <thead>
                   <tr>
                     <th>Email</th>
                     <th>Password</th>
-                    <th>Role</th>
+                    <th>Notes</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>tester1@ridecareshare.com</td>
-                    <td>TestPass123!</td>
-                    <td>Driver</td>
+                    <td>vadim@vega.com</td>
+                    <td>11111111</td>
+                    <td>Driver with many rides</td>
                   </tr>
                   <tr>
-                    <td>tester2@ridecareshare.com</td>
-                    <td>TestPass123!</td>
-                    <td>Rider</td>
-                  </tr>
-                  <tr>
-                    <td>tester3@ridecareshare.com</td>
-                    <td>TestPass123!</td>
-                    <td>Both</td>
-                  </tr>
-                  <tr>
-                    <td>tester4@ridecareshare.com</td>
-                    <td>TestPass123!</td>
-                    <td>Driver</td>
-                  </tr>
-                  <tr>
-                    <td>tester5@ridecareshare.com</td>
-                    <td>TestPass123!</td>
-                    <td>Rider</td>
+                    <td>olivia@owen.com</td>
+                    <td>11111111</td>
+                    <td>Active driver/passenger</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <h3>Test Credit Card</h3>
-            <p>For testing donations:</p>
+            <p>For testing donations (Stripe test mode):</p>
             <div class="test-cc">
               <code>4242 4242 4242 4242</code>
               <span>Exp: 12/28 | CVV: 123 | ZIP: 12345</span>
             </div>
+
+            <h3>Quick Tips</h3>
+            <ul>
+              <li><strong>Pull to refresh</strong> on any list screen</li>
+              <li>
+                <strong>Tap driver/passenger photos</strong> to see full profile
+              </li>
+              <li>
+                <strong>Vehicle details</strong> appear in driver's profile
+                modal
+              </li>
+              <li>
+                <strong>"Start Ride"</strong> becomes active 60 minutes before
+                departure
+              </li>
+              <li>
+                <strong>Check the info icons</strong> (i) throughout the app for
+                explanations
+              </li>
+            </ul>
           </div>
         </div>
       </div>
