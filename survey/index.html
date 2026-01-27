@@ -301,6 +301,112 @@
         }
       }
 
+      /* Test Details Toggle */
+      .test-details-toggle {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .btn-rectangular {
+        background-color: var(--bg-card);
+        color: var(--accent-secondary);
+        border: 2px solid var(--accent-secondary);
+        padding: 15px 40px;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-rectangular:hover {
+        background-color: var(--accent-secondary);
+        color: var(--bg-card);
+      }
+
+      .test-details-content {
+        display: none;
+        margin-top: 30px;
+      }
+
+      .test-details-content.show {
+        display: block;
+      }
+
+      .test-details-card {
+        background-color: var(--bg-card);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px var(--shadow);
+      }
+
+      .test-details-card h3 {
+        color: var(--accent-primary);
+        margin: 25px 0 15px 0;
+        font-size: 1.2rem;
+      }
+
+      .test-details-card h3:first-child {
+        margin-top: 0;
+      }
+
+      .test-details-card ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--text-secondary);
+      }
+
+      .test-details-card li {
+        margin-bottom: 8px;
+      }
+
+      .test-accounts-table {
+        overflow-x: auto;
+        margin-top: 15px;
+      }
+
+      .test-accounts-table table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      .test-accounts-table th,
+      .test-accounts-table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .test-accounts-table th {
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .test-accounts-table td {
+        color: var(--text-secondary);
+      }
+
+      .test-cc {
+        background-color: var(--bg-secondary);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 15px;
+      }
+
+      .test-cc code {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--accent-primary);
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .test-cc span {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+
       /* Survey Section */
       .survey-section {
         background-color: var(--bg-secondary);
@@ -692,6 +798,82 @@
                 <li>Install RideCareShare from TestFlight</li>
                 <li>Open the app and explore!</li>
               </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Test Details Button -->
+        <div class="test-details-toggle">
+          <button class="btn btn-rectangular" id="toggleTestDetails">
+            View App Details & Test Accounts
+          </button>
+        </div>
+
+        <!-- Expandable Test Details Section -->
+        <div class="test-details-content" id="testDetailsContent">
+          <div class="test-details-card">
+            <h3>About the App</h3>
+            <p>
+              RideCareShare is a community-driven ride sharing platform where
+              every ride supports a charitable cause. No fares—just donations to
+              verified charities.
+            </p>
+
+            <h3>What to Test</h3>
+            <ul>
+              <li>Create an account and explore the interface</li>
+              <li>Try creating a ride offer or request</li>
+              <li>Browse available rides and charities</li>
+              <li>Test the matching and messaging features</li>
+              <li>Check how donations work</li>
+            </ul>
+
+            <h3>Test Accounts</h3>
+            <p>Use these accounts to test different scenarios:</p>
+            <div class="test-accounts-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>tester1@ridecareshare.com</td>
+                    <td>TestPass123!</td>
+                    <td>Driver</td>
+                  </tr>
+                  <tr>
+                    <td>tester2@ridecareshare.com</td>
+                    <td>TestPass123!</td>
+                    <td>Rider</td>
+                  </tr>
+                  <tr>
+                    <td>tester3@ridecareshare.com</td>
+                    <td>TestPass123!</td>
+                    <td>Both</td>
+                  </tr>
+                  <tr>
+                    <td>tester4@ridecareshare.com</td>
+                    <td>TestPass123!</td>
+                    <td>Driver</td>
+                  </tr>
+                  <tr>
+                    <td>tester5@ridecareshare.com</td>
+                    <td>TestPass123!</td>
+                    <td>Rider</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Test Credit Card</h3>
+            <p>For testing donations:</p>
+            <div class="test-cc">
+              <code>4242 4242 4242 4242</code>
+              <span>Exp: 12/28 | CVV: 123 | ZIP: 12345</span>
             </div>
           </div>
         </div>
@@ -1725,6 +1907,19 @@
           logoImg.src = "../assets/images/logo.png";
         }
       }
+
+      // Test Details Toggle
+      const toggleBtn = document.getElementById("toggleTestDetails");
+      const testDetails = document.getElementById("testDetailsContent");
+
+      toggleBtn.addEventListener("click", () => {
+        testDetails.classList.toggle("show");
+        if (testDetails.classList.contains("show")) {
+          toggleBtn.textContent = "Hide App Details & Test Accounts";
+        } else {
+          toggleBtn.textContent = "View App Details & Test Accounts";
+        }
+      });
 
       // Limit Q11 to max 2 selections
       const q11Checkboxes = document.querySelectorAll(
