@@ -308,9 +308,9 @@
       }
 
       .btn-rectangular {
-        background-color: var(--bg-card);
+        background-color: #fff3e0;
         color: var(--accent-secondary);
-        border: 2px solid var(--accent-secondary);
+        border: 2px solid #ff9800;
         padding: 15px 40px;
         font-size: 1rem;
         border-radius: 8px;
@@ -319,8 +319,8 @@
       }
 
       .btn-rectangular:hover {
-        background-color: var(--accent-secondary);
-        color: var(--bg-card);
+        background-color: #ffe0b2;
+        color: var(--accent-secondary);
       }
 
       .test-details-content {
@@ -620,6 +620,27 @@
         border-color: var(--accent-primary);
       }
 
+      .text-input {
+        width: 100%;
+        margin-top: 8px;
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      .text-input::placeholder {
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+
+      .text-input:focus {
+        outline: none;
+        border-color: var(--accent-primary);
+      }
+
       .submit-section {
         text-align: center;
         padding-top: 20px;
@@ -867,6 +888,13 @@
             </ul>
 
             <h3>Testing Scenarios</h3>
+            <p>
+              <em
+                >(There are more details and flows, however these are essential.
+                Feel free to explore — the main goal is for the app to be simple
+                and usable.)</em
+              >
+            </p>
             <p><strong>As a Passenger:</strong></p>
             <ul>
               <li>Browse rides for different airports</li>
@@ -1107,6 +1135,44 @@
               ></textarea>
             </div>
 
+            <!-- Critical Issues -->
+            <div class="question-group">
+              <label class="question-label">
+                <span class="q-number">Q1.</span> Issues that you think are
+                critical to fix (optional)
+              </label>
+              <input
+                type="text"
+                name="Q1. Critical Issue 1"
+                class="text-input"
+                placeholder="Issue 1"
+              />
+              <input
+                type="text"
+                name="Q1. Critical Issue 2"
+                class="text-input"
+                placeholder="Issue 2"
+              />
+              <input
+                type="text"
+                name="Q1. Critical Issue 3"
+                class="text-input"
+                placeholder="Issue 3"
+              />
+              <input
+                type="text"
+                name="Q1. Critical Issue 4"
+                class="text-input"
+                placeholder="Issue 4"
+              />
+              <input
+                type="text"
+                name="Q1. Critical Issue 5"
+                class="text-input"
+                placeholder="Issue 5"
+              />
+            </div>
+
             <!-- Section 1: App Look, Flow, and Feel -->
             <div class="section-title">1. App Look, Flow, and Feel</div>
 
@@ -1114,35 +1180,10 @@
               <div class="scale-questions-content">
                 <div class="question-group">
                   <label class="question-label">
-                    <span class="q-number">Q1.</span> Overall look (UI design)
+                    <span class="q-number">Q2.</span> Overall look (UI design)
                   </label>
                   <select
-                    name="Q1. Overall look (UI design)"
-                    class="scale-select"
-                    required
-                  >
-                    <option value="">Select rating...</option>
-                    <option value="1 - Very poor">1 - Very poor</option>
-                    <option value="2 - Poor">2 - Poor</option>
-                    <option value="3 - OK">3 - OK</option>
-                    <option value="4 - Good">4 - Good</option>
-                    <option value="5 - Excellent">5 - Excellent</option>
-                  </select>
-                  <textarea
-                    name="Q1. Comment"
-                    class="comment-field"
-                    placeholder="Anything to add? (optional)"
-                    rows="1"
-                  ></textarea>
-                </div>
-
-                <div class="question-group">
-                  <label class="question-label">
-                    <span class="q-number">Q2.</span> Overall flow (screens make
-                    sense, steps are in the right order)
-                  </label>
-                  <select
-                    name="Q2. Overall flow (screens, steps order)"
+                    name="Q2. Overall look (UI design)"
                     class="scale-select"
                     required
                   >
@@ -1163,11 +1204,11 @@
 
                 <div class="question-group">
                   <label class="question-label">
-                    <span class="q-number">Q3.</span> Overall "feel"
-                    (confidence, clarity, vibe, consistency)
+                    <span class="q-number">Q3.</span> Overall flow (screens make
+                    sense, steps are in the right order)
                   </label>
                   <select
-                    name="Q3. Overall feel (confidence, clarity, vibe)"
+                    name="Q3. Overall flow (screens, steps order)"
                     class="scale-select"
                     required
                   >
@@ -1180,6 +1221,31 @@
                   </select>
                   <textarea
                     name="Q3. Comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
+                </div>
+
+                <div class="question-group">
+                  <label class="question-label">
+                    <span class="q-number">Q4.</span> Overall "feel"
+                    (confidence, clarity, vibe, consistency)
+                  </label>
+                  <select
+                    name="Q4. Overall feel (confidence, clarity, vibe)"
+                    class="scale-select"
+                    required
+                  >
+                    <option value="">Select rating...</option>
+                    <option value="1 - Very poor">1 - Very poor</option>
+                    <option value="2 - Poor">2 - Poor</option>
+                    <option value="3 - OK">3 - OK</option>
+                    <option value="4 - Good">4 - Good</option>
+                    <option value="5 - Excellent">5 - Excellent</option>
+                  </select>
+                  <textarea
+                    name="Q4. Comment"
                     class="comment-field"
                     placeholder="Anything to add? (optional)"
                     rows="1"
@@ -1198,14 +1264,14 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q4.</span> What best describes the
+                <span class="q-number">Q5.</span> What best describes the
                 experience?
               </label>
               <div class="radio-group">
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q4. What best describes the experience?"
+                    name="Q5. What best describes the experience?"
                     value="Felt intuitive from the start"
                     required
                   />
@@ -1214,7 +1280,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q4. What best describes the experience?"
+                    name="Q5. What best describes the experience?"
                     value="Needed a bit of learning but became clear"
                   />
                   <span>Needed a bit of learning but became clear</span>
@@ -1222,7 +1288,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q4. What best describes the experience?"
+                    name="Q5. What best describes the experience?"
                     value="Confusing in multiple places"
                   />
                   <span>Confusing in multiple places</span>
@@ -1230,14 +1296,14 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q4. What best describes the experience?"
+                    name="Q5. What best describes the experience?"
                     value="I got stuck / wasn't sure what to do next"
                   />
                   <span>I got stuck / wasn't sure what to do next</span>
                 </label>
               </div>
               <textarea
-                name="Q4. Comment"
+                name="Q5. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
@@ -1251,11 +1317,11 @@
               <div class="scale-questions-content">
                 <div class="question-group">
                   <label class="question-label">
-                    <span class="q-number">Q5.</span> I was able to do what the
+                    <span class="q-number">Q6.</span> I was able to do what the
                     app intended without extra effort
                   </label>
                   <select
-                    name="Q5. Able to do what app intended without extra effort"
+                    name="Q6. Able to do what app intended without extra effort"
                     class="scale-select"
                     required
                   >
@@ -1273,7 +1339,7 @@
                     </option>
                   </select>
                   <textarea
-                    name="Q5. Comment"
+                    name="Q6. Comment"
                     class="comment-field"
                     placeholder="Anything to add? (optional)"
                     rows="1"
@@ -1292,14 +1358,14 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q6.</span> Where (if anywhere) did you
+                <span class="q-number">Q7.</span> Where (if anywhere) did you
                 feel friction? (select all that apply)
               </label>
               <div class="checkbox-group">
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Creating account / onboarding"
                   />
                   <span>Creating account / onboarding</span>
@@ -1307,7 +1373,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Creating a ride / offering a ride"
                   />
                   <span>Creating a ride / offering a ride</span>
@@ -1315,7 +1381,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Finding a ride"
                   />
                   <span>Finding a ride</span>
@@ -1323,7 +1389,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Matching / selecting a ride"
                   />
                   <span>Matching / selecting a ride</span>
@@ -1331,7 +1397,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Chat / coordination"
                   />
                   <span>Chat / coordination</span>
@@ -1339,7 +1405,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Donation / charity selection"
                   />
                   <span>Donation / charity selection</span>
@@ -1347,7 +1413,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Understanding what happens next"
                   />
                   <span>Understanding what happens next</span>
@@ -1355,7 +1421,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Nothing felt difficult"
                   />
                   <span>Nothing felt difficult</span>
@@ -1363,14 +1429,14 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q6. Where did you feel friction?"
+                    name="Q7. Where did you feel friction?"
                     value="Other"
                   />
                   <span>Other</span>
                 </label>
               </div>
               <textarea
-                name="Q6. Comment"
+                name="Q7. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
@@ -1379,14 +1445,14 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q7.</span> How many times did you feel
+                <span class="q-number">Q8.</span> How many times did you feel
                 "stuck" or unsure what to do next?
               </label>
               <div class="radio-group">
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q7. How many times did you feel stuck?"
+                    name="Q8. How many times did you feel stuck?"
                     value="0 times"
                     required
                   />
@@ -1395,7 +1461,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q7. How many times did you feel stuck?"
+                    name="Q8. How many times did you feel stuck?"
                     value="1 time"
                   />
                   <span>1</span>
@@ -1403,7 +1469,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q7. How many times did you feel stuck?"
+                    name="Q8. How many times did you feel stuck?"
                     value="2-3 times"
                   />
                   <span>2-3</span>
@@ -1411,14 +1477,14 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q7. How many times did you feel stuck?"
+                    name="Q8. How many times did you feel stuck?"
                     value="4+ times"
                   />
                   <span>4+</span>
                 </label>
               </div>
               <textarea
-                name="Q7. Comment"
+                name="Q8. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
@@ -1432,11 +1498,11 @@
               <div class="scale-questions-content">
                 <div class="question-group">
                   <label class="question-label">
-                    <span class="q-number">Q8.</span> The app's purpose was
+                    <span class="q-number">Q9.</span> The app's purpose was
                     clear within the first minute
                   </label>
                   <select
-                    name="Q8. App purpose was clear within first minute"
+                    name="Q9. App purpose was clear within first minute"
                     class="scale-select"
                     required
                   >
@@ -1454,7 +1520,7 @@
                     </option>
                   </select>
                   <textarea
-                    name="Q8. Comment"
+                    name="Q9. Comment"
                     class="comment-field"
                     placeholder="Anything to add? (optional)"
                     rows="1"
@@ -1473,14 +1539,14 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q9.</span> Which statement best matches
+                <span class="q-number">Q10.</span> Which statement best matches
                 your understanding?
               </label>
               <div class="radio-group">
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q9. Which statement best matches your understanding?"
+                    name="Q10. Which statement best matches your understanding?"
                     value="Carpooling + donations to charity (social good twist)"
                     required
                   />
@@ -1492,7 +1558,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q9. Which statement best matches your understanding?"
+                    name="Q10. Which statement best matches your understanding?"
                     value="Mainly a paid ride service alternative"
                   />
                   <span>It's mainly a paid ride service alternative</span>
@@ -1500,7 +1566,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q9. Which statement best matches your understanding?"
+                    name="Q10. Which statement best matches your understanding?"
                     value="Mainly a charity/donation app with rides as a feature"
                   />
                   <span
@@ -1511,14 +1577,14 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q9. Which statement best matches your understanding?"
+                    name="Q10. Which statement best matches your understanding?"
                     value="I'm not sure what it is"
                   />
                   <span>I'm not sure what it is</span>
                 </label>
               </div>
               <textarea
-                name="Q9. Comment"
+                name="Q10. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
@@ -1532,11 +1598,11 @@
               <div class="scale-questions-content">
                 <div class="question-group">
                   <label class="question-label">
-                    <span class="q-number">Q10.</span> I would feel safe using
+                    <span class="q-number">Q11.</span> I would feel safe using
                     this with real people
                   </label>
                   <select
-                    name="Q10. I would feel safe using this with real people"
+                    name="Q11. I would feel safe using this with real people"
                     class="scale-select"
                     required
                   >
@@ -1554,7 +1620,7 @@
                     </option>
                   </select>
                   <textarea
-                    name="Q10. Comment"
+                    name="Q11. Comment"
                     class="comment-field"
                     placeholder="Anything to add? (optional)"
                     rows="1"
@@ -1573,7 +1639,7 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q11.</span> What would increase your
+                <span class="q-number">Q12.</span> What would increase your
                 trust most?
               </label>
               <p class="checkbox-note">Pick up to 2</p>
@@ -1581,7 +1647,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q11. What would increase your trust most?"
+                    name="Q12. What would increase your trust most?"
                     value="Verified profiles / ID verification"
                   />
                   <span>Verified profiles / ID verification</span>
@@ -1589,7 +1655,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q11. What would increase your trust most?"
+                    name="Q12. What would increase your trust most?"
                     value="Ratings / reviews"
                   />
                   <span>Ratings / reviews</span>
@@ -1597,7 +1663,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q11. What would increase your trust most?"
+                    name="Q12. What would increase your trust most?"
                     value="Mutual connections (friends-of-friends)"
                   />
                   <span>Mutual connections (friends-of-friends)</span>
@@ -1605,7 +1671,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q11. What would increase your trust most?"
+                    name="Q12. What would increase your trust most?"
                     value="Clear rules + reporting / moderation"
                   />
                   <span>Clear rules + reporting / moderation</span>
@@ -1613,7 +1679,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q11. What would increase your trust most?"
+                    name="Q12. What would increase your trust most?"
                     value="In-app chat masking phone number"
                   />
                   <span>In-app chat masking phone number</span>
@@ -1621,7 +1687,7 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q11. What would increase your trust most?"
+                    name="Q12. What would increase your trust most?"
                     value="Trip sharing / basic safety features"
                   />
                   <span>Trip sharing / basic safety features</span>
@@ -1629,14 +1695,14 @@
                 <label class="checkbox-option">
                   <input
                     type="checkbox"
-                    name="Q11. What would increase your trust most?"
+                    name="Q12. What would increase your trust most?"
                     value="Other"
                   />
                   <span>Other</span>
                 </label>
               </div>
               <textarea
-                name="Q11. Comment"
+                name="Q12. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
@@ -1650,42 +1716,11 @@
               <div class="scale-questions-content">
                 <div class="question-group">
                   <label class="question-label">
-                    <span class="q-number">Q12.</span> The charity aspect feels
+                    <span class="q-number">Q13.</span> The charity aspect feels
                     meaningful (not gimmicky)
                   </label>
                   <select
-                    name="Q12. The charity aspect feels meaningful (not gimmicky)"
-                    class="scale-select"
-                    required
-                  >
-                    <option value="">Select rating...</option>
-                    <option value="1 - Strongly disagree">
-                      1 - Strongly disagree
-                    </option>
-                    <option value="2 - Disagree">2 - Disagree</option>
-                    <option value="3 - Neutral / unsure">
-                      3 - Neutral / unsure
-                    </option>
-                    <option value="4 - Agree">4 - Agree</option>
-                    <option value="5 - Strongly agree">
-                      5 - Strongly agree
-                    </option>
-                  </select>
-                  <textarea
-                    name="Q12. Comment"
-                    class="comment-field"
-                    placeholder="Anything to add? (optional)"
-                    rows="1"
-                  ></textarea>
-                </div>
-
-                <div class="question-group">
-                  <label class="question-label">
-                    <span class="q-number">Q13.</span> The donation step felt
-                    clear and fair
-                  </label>
-                  <select
-                    name="Q13. The donation step felt clear and fair"
+                    name="Q13. The charity aspect feels meaningful (not gimmicky)"
                     class="scale-select"
                     required
                   >
@@ -1709,6 +1744,37 @@
                     rows="1"
                   ></textarea>
                 </div>
+
+                <div class="question-group">
+                  <label class="question-label">
+                    <span class="q-number">Q14.</span> The donation step felt
+                    clear and fair
+                  </label>
+                  <select
+                    name="Q14. The donation step felt clear and fair"
+                    class="scale-select"
+                    required
+                  >
+                    <option value="">Select rating...</option>
+                    <option value="1 - Strongly disagree">
+                      1 - Strongly disagree
+                    </option>
+                    <option value="2 - Disagree">2 - Disagree</option>
+                    <option value="3 - Neutral / unsure">
+                      3 - Neutral / unsure
+                    </option>
+                    <option value="4 - Agree">4 - Agree</option>
+                    <option value="5 - Strongly agree">
+                      5 - Strongly agree
+                    </option>
+                  </select>
+                  <textarea
+                    name="Q14. Comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
+                </div>
               </div>
               <div class="scale-hint">
                 <strong>Agreement Scale</strong>
@@ -1722,14 +1788,14 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q14.</span> Minimum suggested donation of
+                <span class="q-number">Q15.</span> Minimum suggested donation of
                 ~$8 feels:
               </label>
               <div class="radio-group">
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q14. Minimum suggested donation of ~$8 feels"
+                    name="Q15. Minimum suggested donation of ~$8 feels"
                     value="Too low"
                     required
                   />
@@ -1738,7 +1804,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q14. Minimum suggested donation of ~$8 feels"
+                    name="Q15. Minimum suggested donation of ~$8 feels"
                     value="About right"
                   />
                   <span>About right</span>
@@ -1746,7 +1812,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q14. Minimum suggested donation of ~$8 feels"
+                    name="Q15. Minimum suggested donation of ~$8 feels"
                     value="Too high"
                   />
                   <span>Too high</span>
@@ -1754,14 +1820,14 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q14. Minimum suggested donation of ~$8 feels"
+                    name="Q15. Minimum suggested donation of ~$8 feels"
                     value="Not sure / depends on trip length"
                   />
                   <span>Not sure / depends on trip length</span>
                 </label>
               </div>
               <textarea
-                name="Q14. Comment"
+                name="Q15. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
@@ -1775,36 +1841,11 @@
               <div class="scale-questions-content">
                 <div class="question-group">
                   <label class="question-label">
-                    <span class="q-number">Q15.</span> How likely are you to use
+                    <span class="q-number">Q16.</span> How likely are you to use
                     this in real life in the next month?
                   </label>
                   <select
-                    name="Q15. How likely to use in real life next month?"
-                    class="scale-select"
-                    required
-                  >
-                    <option value="">Select rating...</option>
-                    <option value="1 - Very unlikely">1 - Very unlikely</option>
-                    <option value="2 - Unlikely">2 - Unlikely</option>
-                    <option value="3 - Maybe">3 - Maybe</option>
-                    <option value="4 - Likely">4 - Likely</option>
-                    <option value="5 - Very likely">5 - Very likely</option>
-                  </select>
-                  <textarea
-                    name="Q15. Comment"
-                    class="comment-field"
-                    placeholder="Anything to add? (optional)"
-                    rows="1"
-                  ></textarea>
-                </div>
-
-                <div class="question-group">
-                  <label class="question-label">
-                    <span class="q-number">Q16.</span> How likely are you to
-                    recommend it to a friend?
-                  </label>
-                  <select
-                    name="Q16. How likely to recommend to a friend?"
+                    name="Q16. How likely to use in real life next month?"
                     class="scale-select"
                     required
                   >
@@ -1817,6 +1858,31 @@
                   </select>
                   <textarea
                     name="Q16. Comment"
+                    class="comment-field"
+                    placeholder="Anything to add? (optional)"
+                    rows="1"
+                  ></textarea>
+                </div>
+
+                <div class="question-group">
+                  <label class="question-label">
+                    <span class="q-number">Q17.</span> How likely are you to
+                    recommend it to a friend?
+                  </label>
+                  <select
+                    name="Q17. How likely to recommend to a friend?"
+                    class="scale-select"
+                    required
+                  >
+                    <option value="">Select rating...</option>
+                    <option value="1 - Very unlikely">1 - Very unlikely</option>
+                    <option value="2 - Unlikely">2 - Unlikely</option>
+                    <option value="3 - Maybe">3 - Maybe</option>
+                    <option value="4 - Likely">4 - Likely</option>
+                    <option value="5 - Very likely">5 - Very likely</option>
+                  </select>
+                  <textarea
+                    name="Q17. Comment"
                     class="comment-field"
                     placeholder="Anything to add? (optional)"
                     rows="1"
@@ -1835,14 +1901,14 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q17.</span> What is the main reason you
+                <span class="q-number">Q18.</span> What is the main reason you
                 would use it?
               </label>
               <div class="radio-group">
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q17. Main reason you would use it?"
+                    name="Q18. Main reason you would use it?"
                     value="To help people / do a good deed"
                     required
                   />
@@ -1851,7 +1917,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q17. Main reason you would use it?"
+                    name="Q18. Main reason you would use it?"
                     value="To meet people / community vibe"
                   />
                   <span>To meet people / community vibe</span>
@@ -1859,7 +1925,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q17. Main reason you would use it?"
+                    name="Q18. Main reason you would use it?"
                     value="To reduce car trips / environmental reasons"
                   />
                   <span>To reduce car trips / environmental reasons</span>
@@ -1867,7 +1933,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q17. Main reason you would use it?"
+                    name="Q18. Main reason you would use it?"
                     value="For convenience (rides)"
                   />
                   <span>For convenience (rides)</span>
@@ -1875,14 +1941,14 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q17. Main reason you would use it?"
+                    name="Q18. Main reason you would use it?"
                     value="Other / not sure"
                   />
                   <span>Other / not sure</span>
                 </label>
               </div>
               <textarea
-                name="Q17. Comment"
+                name="Q18. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
@@ -1894,14 +1960,14 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q18.</span> If we could improve only ONE
+                <span class="q-number">Q19.</span> If we could improve only ONE
                 thing first, what should it be?
               </label>
               <div class="radio-group">
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q18. If we could improve only ONE thing first?"
+                    name="Q19. If we could improve only ONE thing first?"
                     value="Make steps simpler / fewer screens"
                     required
                   />
@@ -1910,7 +1976,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q18. If we could improve only ONE thing first?"
+                    name="Q19. If we could improve only ONE thing first?"
                     value="Clearer copy / instructions"
                   />
                   <span>Clearer copy / instructions</span>
@@ -1918,7 +1984,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q18. If we could improve only ONE thing first?"
+                    name="Q19. If we could improve only ONE thing first?"
                     value="Improve matching / search experience"
                   />
                   <span>Improve matching / search experience</span>
@@ -1926,7 +1992,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q18. If we could improve only ONE thing first?"
+                    name="Q19. If we could improve only ONE thing first?"
                     value="Trust & safety features"
                   />
                   <span>Trust & safety features</span>
@@ -1934,7 +2000,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q18. If we could improve only ONE thing first?"
+                    name="Q19. If we could improve only ONE thing first?"
                     value="Donation flow and clarity"
                   />
                   <span>Donation flow and clarity</span>
@@ -1942,7 +2008,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q18. If we could improve only ONE thing first?"
+                    name="Q19. If we could improve only ONE thing first?"
                     value="Visual design / polish"
                   />
                   <span>Visual design / polish</span>
@@ -1950,7 +2016,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q18. If we could improve only ONE thing first?"
+                    name="Q19. If we could improve only ONE thing first?"
                     value="Notifications / communication"
                   />
                   <span>Notifications / communication</span>
@@ -1958,14 +2024,14 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q18. If we could improve only ONE thing first?"
+                    name="Q19. If we could improve only ONE thing first?"
                     value="Other"
                   />
                   <span>Other</span>
                 </label>
               </div>
               <textarea
-                name="Q18. Comment"
+                name="Q19. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
@@ -1974,14 +2040,14 @@
 
             <div class="question-group">
               <label class="question-label">
-                <span class="q-number">Q19.</span> Overall: how "ready" does
+                <span class="q-number">Q20.</span> Overall: how "ready" does
                 this feel today?
               </label>
               <div class="radio-group">
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q19. Overall: how ready does this feel today?"
+                    name="Q20. Overall: how ready does this feel today?"
                     value="Not ready (prototype-level)"
                     required
                   />
@@ -1990,7 +2056,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q19. Overall: how ready does this feel today?"
+                    name="Q20. Overall: how ready does this feel today?"
                     value="Early beta"
                   />
                   <span>Early beta</span>
@@ -1998,7 +2064,7 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q19. Overall: how ready does this feel today?"
+                    name="Q20. Overall: how ready does this feel today?"
                     value="Nearly ready"
                   />
                   <span>Nearly ready</span>
@@ -2006,14 +2072,14 @@
                 <label class="radio-option">
                   <input
                     type="radio"
-                    name="Q19. Overall: how ready does this feel today?"
+                    name="Q20. Overall: how ready does this feel today?"
                     value="Launch-ready"
                   />
                   <span>Launch-ready</span>
                 </label>
               </div>
               <textarea
-                name="Q19. Comment"
+                name="Q20. Comment"
                 class="comment-field"
                 placeholder="Anything to add? (optional)"
                 rows="1"
