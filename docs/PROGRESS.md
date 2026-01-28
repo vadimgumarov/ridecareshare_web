@@ -1,5 +1,65 @@
 # PROGRESS.md - RideCareShare Website
 
+## 2026-01-27
+
+### Survey Page & Strategic Updates
+
+**Survey Page (`/survey/index.html`):**
+- Created comprehensive beta tester survey page
+- Renamed "Focus Group Survey" to "Honest Survey Group"
+- Added "About You" section with employer cohort question (Airport/Airline/Hospital/University)
+- Added expandable "App Details & Test Accounts" section with:
+  - What is RideCareShare? - accurate product description
+  - Key Features list
+  - Testing Scenarios (passenger + driver)
+  - All 24 test accounts with password 11111111
+  - Test Credit Card (Stripe test mode)
+  - Quick Tips
+- Configured FormSpree endpoint for form submission
+- Improved form field names/values for readable email responses
+- Added iOS TestFlight link: https://testflight.apple.com/join/ztpf1f17
+- Added Android Expo build link
+- Fixed scroll behavior to show thank you message after submission
+- Updated time estimate to 20-40 minutes
+- Added verification bypass note for testing phase
+
+**Strategic Language Updates:**
+- Changed "rideshare" terminology to "shared rides" / "paid ride service" (avoid TNC adjacency)
+- Updated product description: "The world's first donation-powered airport carpooling app"
+- Clarified: No money exchanges hands - it's a "connection"
+- Clarified: Minimum $8 donation goes directly to driver's charity
+
+**Main Site B2B Section:**
+- Added "For Airports & Employers" section
+- Two cards: Airports + Employers & Institutions
+- Partnership inquiry links to partners@ridecareshare.com
+- Added btn-outline style with secondary blue color
+
+**Privacy/Data Clarifications:**
+- In-App Chat: Real-time via websocket, nothing saved, no PII stored
+- Location Sharing: Real-time via websocket only, never stored
+
+**Recent Commits:**
+- `0a41a5e` content: add all 24 test accounts with password 11111111
+- `edb52c1` style: add line break after tagline
+- `7c827e3` content: change time estimate to 20-40 minutes
+- `b6d5a3a` content: add create your own account option with bypass note
+- `a00d98d` content: change heading to Welcome and Thank You!
+- `678cb13` content: update What is RideCareShare with accurate product description
+- `051a258` content: clarify in-app chat and location sharing
+- `ed77f9e` content: replace test details with actual PRE-BETA-TESTER-GUIDE content
+- `5a99118` feat: add expandable test details section with accounts and instructions
+- `9d33982` feat: update Android download to Expo build link
+- `504b442` style: match Android button to iOS design
+- `00cc4c3` content: rename button to Join RideCareShare TestFlight
+- `82a40d3` fix: reorder iOS installation steps - TestFlight app first
+- `45a0647` feat: add TestFlight link for iOS beta
+- `4bd0dab` content: update B2B section subtitle messaging
+- `7435b91` style: add btn-outline with secondary blue color
+- `6fdc5a4` feat: strategic updates - language audit, cohort question, B2B section
+
+---
+
 ## 2026-01-15
 
 ### Privacy Policy & Terms of Service
@@ -108,62 +168,11 @@
 
 ---
 
-## 2025-11-12
-- Completed: Initial project setup
-- Tests: Manual testing framework defined (browser testing, accessibility, performance)
-- Performance: Static HTML file (~20KB), estimated load time < 1 second
-- Discovered: Single-file approach provides excellent performance and simplicity for landing page
-
-### Accomplishments
-- Git repository initialized and connected to GitHub remote
-- Branding updated from RideCareTogether to RideCareShare across entire website
-- Founder name updated to Vadim in about section
-- Social media icons added to footer (Facebook, X, Instagram, YouTube) with matching design pattern
-- Waitlist form enhanced with data capture and email service placeholder
-- Project configuration files created (.claude_project)
-- Documentation structure established (CONTINUATION.md, PROGRESS.md, ISSUES.md, deployment guides)
-
-### Technical Details
-- Repository: https://github.com/vadimgumarov/ridecareshare_web
-- Technology: Static HTML/CSS/JavaScript (no build process)
-- Design: Muted earth tones, light/dark theme toggle, fully responsive
-- Accessibility: Semantic HTML, ARIA labels, keyboard navigation support
-
----
-
-## 2025-11-13
-- Completed: Full website deployment with all integrations
-- Tests: Manual browser testing completed (Chrome, Safari), waitlist form tested and verified
-- Performance: Site live with <1s load time, GitHub Pages CDN serving globally
-- Discovered: Cloudflare provides superior free domain redirect solution vs paid registrar forwarding
-
-### Accomplishments
-- GitHub Pages deployment completed and verified
-- Custom domain configuration:
-  - Primary: ridecareshare.com (DNS configured, HTTPS enabled)
-  - Secondary: ridecaretogether.com (Cloudflare redirect configured)
-- Cloudflare setup completed for professional domain forwarding
-- Email integration: hello@ridecareshare.com added to website and meta tags
-- Social media accounts created and linked:
-  - Facebook: https://www.facebook.com/profile.php?id=61583547277956
-  - Instagram: https://www.instagram.com/ridecareshare/
-  - X (Twitter): https://x.com/ridecareshare
-  - YouTube: @RideCareShareCommunications
-- FormSpree integration completed and tested (50 submissions/month free tier)
-- SEO meta tags added (description, keywords, Open Graph for social sharing)
-
-### Technical Details
-- Live URLs: ridecareshare.com, ridecaretogether.com, GitHub Pages URL
-- FormSpree endpoint: https://formspree.io/f/xjkjknbp
-- Waitlist form: Fully functional, sends to hello@ridecareshare.com
-- DNS: Network Solutions for primary, Cloudflare for redirect
-- All commits follow conventional commit format
-
-### Next Steps
-- UI improvements and refinements
-- Content updates and additions
-- Potentially add logo/branding images
-- Consider analytics integration (privacy-friendly)
+## 2025-11-15
+- Completed: Website UI overhaul - consistent two-column design pattern across all sections
+- Tests: Manual browser testing (responsive layouts, image display, column alignment)
+- Performance: Added app screenshots (~400KB), load time still <1s
+- Discovered: Two-column pattern with phone mockups creates cohesive, professional design
 
 ---
 
@@ -171,38 +180,17 @@
 - Completed: Founder story overlay modal implementation
 - Tests: Manual browser testing (modal functionality, responsive design, theme compatibility)
 - Performance: Modal loads instantly with smooth CSS animations, no performance impact
-- Discovered: Overlay pattern provides excellent user experience for long-form content without page navigation
-
-### Accomplishments
-- Changed "Why We Built RideCareShare" heading to "Why RideCareShare" for conciseness
-- Converted "Read Our Story" anchor link to button for better UX
-- Implemented full-featured modal overlay component with:
-  - Complete founder story text (comprehensive narrative about RideCareShare's origin and vision)
-  - Smooth slide-in animation on open
-  - Multiple close methods (close button, click outside overlay, ESC key)
-  - Theme-aware styling (works in both light and dark modes)
-  - Mobile-responsive design with adjusted padding and font sizes
-  - Prevents body scroll when modal is open
-
-### Technical Details
-- Modal overlay with rgba(0, 0, 0, 0.75) backdrop
-- CSS animations for smooth transitions
-- JavaScript event listeners for open/close functionality
-- Accessibility features: ARIA labels, keyboard navigation support
-- No external dependencies - pure HTML/CSS/JavaScript implementation
-
-### Refinements and Fixes
-- Fixed DOM access errors by repositioning modal HTML before script tag
-- Removed blue color from strong tags for consistent text appearance
-- Reduced line-height from 1.8 to 1.5 for better readability
-- Reduced paragraph spacing from 20px to 12px to minimize scrolling
-- Fixed modal positioning to show rounded corners at top and bottom
-- Replaced AI-generated content with correct user-provided story text
 
 ---
 
-## 2025-11-15
-- Completed: Website UI overhaul - consistent two-column design pattern across all sections
-- Tests: Manual browser testing (responsive layouts, image display, column alignment)
-- Performance: Added app screenshots (~400KB), load time still <1s
-- Discovered: Two-column pattern with phone mockups creates cohesive, professional design
+## 2025-11-13
+- Completed: Full website deployment with all integrations
+- Tests: Manual browser testing completed (Chrome, Safari), waitlist form tested and verified
+- Performance: Site live with <1s load time, GitHub Pages CDN serving globally
+
+---
+
+## 2025-11-12
+- Completed: Initial project setup
+- Tests: Manual testing framework defined (browser testing, accessibility, performance)
+- Performance: Static HTML file (~20KB), estimated load time < 1 second

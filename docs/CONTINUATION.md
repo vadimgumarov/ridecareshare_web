@@ -1,11 +1,11 @@
 # CONTINUATION.md - RideCareShare Website
 
 ## Current Status
-- Working on: Website pre-launch landing page - fully functional and deployed
+- Working on: Beta tester survey page and main site B2B section
 - Branch: main
-- Test Status: Lighthouse audit passed (96/93/100/100)
-- Last session: Added Privacy Policy and Terms of Service modal overlays
-- Current focus: Launch ready
+- Test Status: Survey page functional, main site Lighthouse 96/93/100/100
+- Last session: Comprehensive survey page updates, strategic language changes, B2B section
+- Current focus: Pre-beta testing phase
 - **Epic #1 CLOSED** - All success criteria met
 
 ## Lighthouse Audit (2026-01-06)
@@ -18,110 +18,103 @@
 
 ## Immediate Next Steps
 
-**Queued for next session:** Launch
+**Current Phase:** Pre-Beta Testing
 
-1. Optional: Add analytics (privacy-friendly: Plausible or Fathom)
-2. Optional: Fix minor accessibility issues (color contrast, heading order)
-3. Monitor production site performance
+1. Send survey link to beta testers: https://ridecareshare.com/survey/
+2. Monitor FormSpree submissions
+3. Collect and analyze feedback
+4. Iterate on app based on survey responses
 
-## Context & Recent Decisions
-- **Design Pattern Established (2025-11-15)**: All showcase sections now follow consistent two-column layout
-  - Grid layout: 1fr 1fr with 60px gap
-  - Phone mockup in one column (alternating left/right sides)
-  - Content card in other column with section heading, list format, border separators
-  - Mobile responsive: columns stack vertically
-  - Phone mockups use gradient border (#3B9AF8 to #5DB0FA)
+## Survey Page Features (`/survey/index.html`)
 
-- **Section Restructuring Completed**:
-  - **Three Crises, One Simple Solution**: Phone (2-options screen) left, crisis list right
-  - **Purposeful Mobility**: Text left, phone (placeholder for donation screen) right
-  - **How It Works**: Steps 1-4 left (2x2 grid), Key Features list right
-  - **Every Ride Creates Ripples**: Phone (signup screen) left, impact stats right
-  - **Early Voices**: Testimonial cards left, phone (placeholder for matched screen) right
+**Structure:**
+- Hero: "Honest Survey Group" title
+- Welcome section: Introduction for selected testers
+- Step 1: Download the App (Android Expo + iOS TestFlight)
+- Expandable "App Details & Test Accounts" section
+- Step 2: Complete the Survey (19 questions + About You)
+- Success message after submission
 
-- **Content Refinements**:
-  - Changed "Read Our Story" to "Read The Story"
-  - Converted cards to list format throughout (cleaner, more scannable)
-  - Reduced Key Features from 5 to 4 items (better alignment with 4 steps)
-  - Combined "Impact Dashboard" + "1.5M+ Charities" into single feature
-  - Renamed "Real-Time Safety" to "Verified Safety" (removed PII tracking references)
-  - Moved section headings into text columns, centered within columns
-  - Centered all h2 headings globally
+**Download Links:**
+- iOS TestFlight: https://testflight.apple.com/join/ztpf1f17
+- Android Expo: https://expo.dev/accounts/vadimgumarov/projects/ridecareshare/builds/134be48e-2165-449b-b6d0-5f9f2bc45980
 
-- **App Screenshots Integrated**:
-  - **Three Crises**: app-2-options.png (I need a ride / I am driving buttons)
-  - **Every Ride**: app-signup.png (logo, login, create account)
-  - Images properly sized with CSS :has(img) selector removing padding
-  - Remaining: donation screen, matched/congrats screen
+**Test Accounts:** 24 accounts (adam@adams.com through xavier@xu.com)
+- Password: 11111111 (all accounts)
+- Verification bypass enabled for testing phase
 
-- **Deployment Status**: Website fully deployed and operational
-  - Primary domain: ridecareshare.com (live with HTTPS)
-  - Secondary domain: ridecaretogether.com (redirects via Cloudflare)
-  - GitHub Pages: Auto-deploys on push to main branch
+**Test Credit Card (Stripe):**
+- Number: 4242 4242 4242 4242
+- Exp: 12/28 | CVV: 123 | ZIP: 12345
 
-- **Email Integration**: FormSpree configured and tested
-  - Endpoint: https://formspree.io/f/xjkjknbp
-  - Sends to: hello@ridecareshare.com
-  - Free tier: 50 submissions/month
+## Main Site Updates
 
-- **Social Media**: All accounts created and linked
-  - Facebook: https://www.facebook.com/profile.php?id=61583547277956
-  - Instagram: https://www.instagram.com/ridecareshare/
-  - X: https://x.com/ridecareshare
-  - YouTube: @RideCareShareCommunications
+**B2B Section Added:**
+- "For Airports & Employers" section between How It Works and Waitlist
+- Two cards: Airports + Employers & Institutions
+- Contact: partners@ridecareshare.com
 
-- **Color Scheme**: #3B9AF8 primary blue with neutral gray backgrounds
+**Strategic Language Changes:**
+- "rideshare" → "shared rides" / "paid ride service" (avoid TNC adjacency)
+- Clarified product: "The world's first donation-powered airport carpooling app"
+- No money exchanges hands - it's a "connection"
+- Minimum $8 donation goes directly to driver's charity
 
-- **Logo**: Vertical version (logo.png for light theme, logo-dark.png for dark theme)
+**Privacy/Data Clarifications:**
+- In-App Chat: Real-time via websocket, nothing saved, no PII stored
+- Location Sharing: Real-time via websocket only, never stored
 
-## Test Status & Coverage
-- Manual testing: Comprehensive testing completed
-  - Waitlist form: Tested and verified
-  - Domain redirects: Both domains working
-  - Social media links: All verified
-  - Theme toggle: Light/dark mode functioning
-  - Responsive design: Tested on mobile and desktop
-  - Founder story modal: All interactions tested
-  - Two-column layouts: Responsive breakpoints verified
-  - Phone mockups: Image display and sizing verified
-- Browser testing: Chrome and Safari tested
-- Performance: <1 second load time confirmed
-- HTTPS: Enabled on both custom domains
+## Recent Commits (2026-01-27)
+- `0a41a5e` content: add all 24 test accounts with password 11111111
+- `edb52c1` style: add line break after tagline
+- `7c827e3` content: change time estimate to 20-40 minutes
+- `b6d5a3a` content: add create your own account option with bypass note
+- `a00d98d` content: change heading to Welcome and Thank You!
+- `678cb13` content: update What is RideCareShare with accurate product description
+- `051a258` content: clarify in-app chat and location sharing
+- `ed77f9e` content: replace test details with actual PRE-BETA-TESTER-GUIDE content
+- `5a99118` feat: add expandable test details section
+- `9d33982` feat: update Android download to Expo build link
+- `45a0647` feat: add TestFlight link for iOS beta
+- `6fdc5a4` feat: strategic updates - language audit, cohort question, B2B section
 
-## Session Handoff Notes
-- **Production Status**: Website fully functional and live
-- **Pending Assets**:
-  - Donation screen for Purposeful Mobility section
-  - Matched/congrats screen for Early Voices section
-- **Browser Caching**: Users may need hard refresh (Cmd+Shift+R) to see latest changes
-- **FormSpree Dashboard**: https://formspree.io/forms/xjkjknbp/submissions (0/50 used)
-- **No Critical Issues**: All features working as expected
-- **Safe to Deploy**: All changes tested and verified before pushing
-
-## Recent Commits (2026-01-15)
+### Previous (2026-01-15)
 - cf15df6: feat: add Privacy Policy and Terms of Service modal overlays
 
-### Previous (2026-01-06)
-- e0e19ff: fix: correct capitalization "Your decision" → "your decision"
-- 303816f: perf: add width/height attributes and lazy loading to all images
-- ffca419: fix: change og-image tagline to black text
-- 48da9aa: fix: improve modal accessibility
-- 00bc3c0: feat: add Open Graph image for social sharing
+## Deployment Status
+- Primary domain: ridecareshare.com (live with HTTPS)
+- Secondary domain: ridecaretogether.com (redirects via Cloudflare)
+- Survey page: ridecareshare.com/survey/
+- GitHub Pages: Auto-deploys on push to main branch
+
+## Email Integration
+- FormSpree endpoint: https://formspree.io/f/xjkjknbp
+- Sends to: hello@ridecareshare.com
+- Free tier: 50 submissions/month
 
 ## Architecture Notes
 - Static HTML/CSS/JavaScript (no build process)
-- Single index.html file (~50KB)
+- Main site: index.html (~50KB)
+- Survey page: survey/index.html
 - Fast deployment: push to main → live in 1-2 minutes
 - Assets: assets/images/ (logo files, app screenshots)
+
+## Session Handoff Notes
+- **Survey page ready** for beta tester distribution
+- **24 test accounts** available with password 11111111
+- **Verification bypass** enabled for testing phase
+- **FormSpree** configured for survey submissions
+- **Browser Caching**: Users may need hard refresh (Cmd+Shift+R) to see latest changes
 
 ## Future Considerations
 - Analytics: Privacy-friendly options (Plausible, Fathom)
 - Video content: 60-second explainer video
-- Testimonials: Real user feedback needed
+- Real testimonials from beta testers
 - Minor a11y fixes: Color contrast, heading order (optional)
+- Airport/employer partnership outreach
 
 ---
 
-**Last Updated**: 2026-01-15
-**Status**: Launch ready (Lighthouse: 96/93/100/100)
-**Next Milestone**: Launch
+**Last Updated**: 2026-01-27
+**Status**: Pre-beta testing phase
+**Next Milestone**: Collect beta tester feedback
