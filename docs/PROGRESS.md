@@ -1,5 +1,45 @@
 # PROGRESS.md - RideCareShare Website
 
+## 2026-02-05
+
+### Beta Feedback Analysis & Survey Updates
+
+**Survey Page Updates:**
+- Added Q1: "Critical issues to fix" with 5 optional text fields
+- Renumbered all questions Q2-Q20
+- Added testing scenarios note about exploring more flows
+- Changed "View App Details" button to orange highlight for visibility
+- Updated Android download to Google Play internal testing link
+
+**Feedback Documentation Created:**
+- `docs/FEEDBACK_SURVEY.md` - Raw survey responses (5 responses analyzed)
+- `docs/FEEDBACK_SUMMARY.md` - Comprehensive analysis with:
+  - Executive Summary with Health Score (7.4/10)
+  - Visual rating distributions (ASCII bar charts)
+  - Master Issue List (31 issues, IDs I-001 to I-031)
+  - Priority Matrix (effort vs impact quadrant)
+  - Response distributions for all questions
+  - Top themes analysis (Trust & Safety #1 priority)
+  - Recommended actions by timeline
+
+**Key Findings:**
+- 4 Critical bugs identified (airport selection blocker, navigation bugs, crash)
+- 11 Major issues, 6 Minor, 10 Enhancements
+- Trust & Safety: 60% selected as #1 thing to improve
+- UI Design: 4.4/5, Charity meaningful: 4.6/5
+- Launch readiness: 3/5 say "nearly/launch ready"
+
+**Business Pivot Noted:**
+- Removing minimum donation requirement
+- Donation now optional, asked only after ride completion
+- No payment flow during ride - pure carpooling with optional giving
+
+**Recent Commits:**
+- `cf8ee0d` feat: update Android download to Google Play internal testing
+- `4f96891` feat: add Q1 critical issues field, testing scenarios note, orange highlight button
+
+---
+
 ## 2026-01-27
 
 ### Survey Page & Strategic Updates
